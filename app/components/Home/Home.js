@@ -72,26 +72,29 @@ return <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
                     <li style={{ color: "white" }}>
-                        <a href="/Online" className="text-reset text-white">Ahashmi@live.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" className="text-reset text-white">Ahashmi@live.com</a>
+
+
                     </li>
                     <li style={{ color: "white" }}>
-                        <div className="d-flex justify-content-center gap-2">
+                    <div className="d-flex justify-content-center gap-2">
                         
-      <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
-  
-    
-      <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
-
-                            <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
-                            <i className="fa-solid fa-wifi mt-2"></i>
-                            <i 
-      className="fa-solid fa-lock mt-2"
-      style={{ cursor: 'pointer' }} // To indicate the icon is clickable
-      onClick={()=>{
-        move.push("/Login2");
-      }}
-    ></i>
-                        </div>
+                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                    
+                      
+                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                  
+                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+                                              <i className="fa-solid fa-wifi mt-2"></i>
+                                              <i 
+                        className="fa-solid fa-lock mt-2"
+                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
+                        onClick={()=>{
+                          move.push("/Login2");
+                        }}
+                      ></i>
+                                          </div>
+                  
                     </li>
                 </ul>
             </div>

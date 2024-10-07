@@ -153,7 +153,7 @@ return <div>
       
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Key Objectives of Internal Controls</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Accuracy of Financial Reporting</li>
+        <li className="h5 text-center text-lg-start  " style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Accuracy of Financial Reporting</li>
         <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Compliance with Laws and Regulations</li>
         <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Operational Efficiency</li>
         <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Fraud Prevention</li>
