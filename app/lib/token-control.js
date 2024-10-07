@@ -1,37 +1,31 @@
-import *  as jose from "jose"
-
-
-export const isauthenticated = async(req)=>{
-
-const tokken = req.header.get("authorization") || req.header.get("Authorization");
-
-if(tokken){
-
-try{
-  
+import * as jose from "jose";
+export const isAuthenticated= async req=>{
+ let token = req.headers.get("Authorization") ||
+req.headers.get("Authorization");
+console.log(token + " token mila");
+if(token){
+  try{
+     let secret = new
+    TextEncoder().encode("eyJhbGciOiJIUzI1NiJ9.eyJtZXJpSUQiOiI2NzAxYzgwYzRjMGM2ZjE1NTk3OGM1YzAifQ.cCqbP6vWvpmtXWGFWMuSwM8rPBy-GJq8lEv71LnTX84")
+     let decoded=await jose.jwtVerify(token,secret);
    
-    const seceret = new TextEncoder().encode(
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJpSUQiOiI2NmI0YjE4NGJlZDIxZDdiYzk3NTJjY2IiLCJpYXQiOjE3MjMxNDU2NDYsImV4cCI6MTcyMzE1Mjg0Nn0.9BKAg466VXcePWmI-5zSeiuPFxyksFiC9H628UbQEJY"
-    )
-
-    const encode = await jose.jwtVerify(tokken,seceret);
-
-    if(encode.payload?.meriId){
-      return encode.payload?.meriId;
-    }else{
-      return false;
-    }
-
- 
-}catch(e){
-  console.log("authenticated failed " + e.message);
-  
-  return false;
+     
+     if(decoded.payload?.meriID){
+     return decoded.payload?.meriID;
+     }else{
+     return false
+     }
+     }catch(err){
+     console.log("authenticated error ");
+     return false
+    
+     }
+     }else{
+     return false
+     }
+    
 }
-}else{
-  return false;
-}
+   
+   
 
-
-}
 

@@ -1,12 +1,25 @@
+"use client";
 import Link from "next/link"
-
+import { useRouter } from "next/navigation";
 
 
 export default function HomeandMortgage(){
 
 
 
+  let move = useRouter();
+  const openFacebook = () => {
+    window.open('https://www.facebook.com', '_blank');
+  };
 
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com', '_blank');
+  };
+
+
+  const openTwitter = () => {
+    window.open('https://www.twitter.com', '_blank');
+  };
 
 
 
@@ -35,23 +48,37 @@ return <div>
             {/* Fourth Item with Increased Top Margin */}
             <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
                
-                <div>
-                    <ul className="list-unstyled pt-2 mb-0 text-center">
-                        <li style={{ color: "white" }}>T: 703-953-6184</li>
-                        <li style={{ color: "white" }}>
-                            <a href="/Online" className="text-reset text-white">Ahashmi@live.com</a>
-                        </li>
-                        <li style={{ color: "white" }}>
-                            <div className="d-flex justify-content-center gap-2">
-                                <i className="fa-brands fa-facebook-f mt-2"></i>
-                                <i className="fa-brands fa-linkedin-in mt-2"></i>
-                                <i className="fa-brands fa-twitter mt-2"></i>
-                                <i className="fa-solid fa-wifi mt-2"></i>
-                                <i className="fa-solid fa-lock mt-2"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div>
+                <ul className="list-unstyled pt-2 mb-0 text-center">
+                    <li style={{ color: "white" }}>T: 703-953-6184</li>
+                    <li style={{ color: "white" }}>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" className="text-reset text-white">Ahashmi@live.com</a>
+
+
+                    </li>
+                    <li style={{ color: "white" }}>
+                    <div className="d-flex justify-content-center gap-2">
+                        
+                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                    
+                      
+                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                  
+                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+                                              <i className="fa-solid fa-wifi mt-2"></i>
+                                              <i 
+                        className="fa-solid fa-lock mt-2"
+                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
+                        onClick={()=>{
+                          move.push("/Login2");
+                        }}
+                      ></i>
+                                          </div>
+                  
+                    </li>
+                </ul>
+            </div>
+
             </div>
         </div>
     </div>

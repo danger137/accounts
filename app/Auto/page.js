@@ -1,13 +1,25 @@
+"use client"
 import Link from "next/link"
 
-
-
+import { useRouter } from "next/navigation";
 export default function Auto(){
 
 
+  let move = useRouter();
 
 
+  const openFacebook = () => {
+    window.open('https://www.facebook.com', '_blank');
+  };
 
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com', '_blank');
+  };
+
+
+  const openTwitter = () => {
+    window.open('https://www.twitter.com', '_blank');
+  };
 
 
 
@@ -42,13 +54,23 @@ return <div>
                             <a href="/Online" className="text-reset text-white">Ahashmi@live.com</a>
                         </li>
                         <li style={{ color: "white" }}>
-                            <div className="d-flex justify-content-center gap-2">
-                                <i className="fa-brands fa-facebook-f mt-2"></i>
-                                <i className="fa-brands fa-linkedin-in mt-2"></i>
-                                <i className="fa-brands fa-twitter mt-2"></i>
-                                <i className="fa-solid fa-wifi mt-2"></i>
-                                <i className="fa-solid fa-lock mt-2"></i>
-                            </div>
+                        <div className="d-flex justify-content-center gap-2">
+                        
+                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                    
+                      
+                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                  
+                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+                                              <i className="fa-solid fa-wifi mt-2"></i>
+                                              <i 
+                        className="fa-solid fa-lock mt-2"
+                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
+                        onClick={()=>{
+                          move.push("/Login2");
+                        }}
+                      ></i>
+                                          </div>
                         </li>
                     </ul>
                 </div>

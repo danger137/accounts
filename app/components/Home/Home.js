@@ -10,6 +10,19 @@ export default function Home(){
 let move = useRouter();
 
 
+const openFacebook = () => {
+    window.open('https://www.facebook.com', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com', '_blank');
+  };
+
+
+  const openTwitter = () => {
+    window.open('https://www.twitter.com', '_blank');
+  };
+
 return <div>
 
 
@@ -29,13 +42,13 @@ return <div>
             <div>
                 <ul className="list-unstyled pt-2 mb-0">
                     <li style={{ color: "white" }}>
-                        <a href="/Online" className="text-reset text-white">For Individuals</a>
+                        <a href="/BookKeeping" className="text-reset text-white">Book Keeping</a>
                     </li>
                     <li style={{ color: "white" }}>
-                        <a href="/Books" className="text-reset text-white">For Businesses</a>
+                        <a href="/TaxPractice" className="text-reset text-white">Tax Practice</a>
                     </li>
                     <li style={{ color: "white" }}>
-                        <a href="/Books" className="text-reset text-white">Tax Services</a>
+                        <a href="/Internalcontrols" className="text-reset text-white">Internal Controls</a>
                     </li>
                 </ul>
             </div>
@@ -63,9 +76,13 @@ return <div>
                     </li>
                     <li style={{ color: "white" }}>
                         <div className="d-flex justify-content-center gap-2">
-                            <i className="fa-brands fa-facebook-f mt-2"></i>
-                            <i className="fa-brands fa-linkedin-in mt-2"></i>
-                            <i className="fa-brands fa-twitter mt-2"></i>
+                        
+      <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+  
+    
+      <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+
+                            <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
                             <i className="fa-solid fa-wifi mt-2"></i>
                             <i 
       className="fa-solid fa-lock mt-2"

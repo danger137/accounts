@@ -89,13 +89,13 @@ return <div style={{height:"100vh"}} >
               <input {...register("Password",{required:true})} type="password" id="form2Example28" className="form-control p-3 form-control-lg" />
             </div>
             { errors.Password && errors.Password.type == "required" ? <div className="password text-center pt-2 " >Please Enter Email</div>:null}
-            <div className="d-flex ms-2 flex-column flex-md-row justify-content-between align-items-center mt-3">
+            {/* <div className="d-flex ms-2 flex-column flex-md-row justify-content-between align-items-center mt-3">
             <p style={{ color: "rgb(141 139 139)" }} className="small pt-3 pt-md-0 text-center text-md-end mt-2 mt-md-0">
   Not yet a member ?  
   <Link href="/Registration" className="ms-1" style={{ color: "#2193c9", textDecoration: "underline" }} >Register here</Link>.
 </p>
 
-            </div>
+            </div> */}
 
             <div className="mt-3 ms-2">
               <button type="submit" id="btn"  className="btn btn-primary w-100 w-md-auto">

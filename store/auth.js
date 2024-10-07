@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 let authSlice = createSlice({
       name: "authSlice",
       initialState:{
-        currentUser : {},
+        currentUser : "",
        users:[],
        users2:[],
         name:"ali"
@@ -12,8 +12,8 @@ let authSlice = createSlice({
       reducers:{
         setUser:(oldData,newData)=>{
            oldData.currentUser = newData.payload;
-           if(!newData.payload._id){
-            localStorage.removeItem("token");
+           if(newData.payload==""){
+            localStorage.removeItem("sometokken")
            }
         },
         addUser:(oldData,newData)=>{

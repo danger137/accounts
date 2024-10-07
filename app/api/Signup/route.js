@@ -2,8 +2,7 @@ import { User } from "@/app/model/user";
 import jsonwebToken from "jsonwebtoken";
 import { pipeline } from "stream";
 import {promisify} from "util";
-
-import { isauthenticated } from "@/app/lib/token-control";
+import {isauthenticated, isAuthenticated} from "../../lib/token-control";
 
 const { NextResponse } = require("next/server");
 
@@ -126,19 +125,27 @@ console.log(nyaUser);
     try{
 
         // console.log("##########");
-        
+    console.log("verification process on");
+  
 
-    let verifiedData =  await isauthenticated(req);
+    let verifiedData =  await isAuthenticated(req);
 
        
     
+     
+     
 
     if(verifiedData){
-        // console.log("***********");
+        console.log("***********");
+   
         
-        console.log(verifiedData);
+        
+    
 
-       let user = await User.findById(verifiedData.meriID);
+       let user = await User.findById(verifiedData);
+
+console.log(user);
+
        return NextResponse.json({
         user
     });
@@ -177,7 +184,7 @@ console.log(nyaUser);
        
         
     // }
-console.log("chalaga  waa");
+
 
 
  

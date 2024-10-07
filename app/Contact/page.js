@@ -2,19 +2,49 @@
 import Link from "next/link";
 
 import "./Contact.css";
+import { useRef } from "react";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 
-
+import { useRouter } from "next/navigation";
 
 export default function Contact(){
 
   
-    
- 
+  let move = useRouter();
+
+  const openFacebook = () => {
+    window.open('https://www.facebook.com', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com', '_blank');
+  };
 
 
+  const openTwitter = () => {
+    window.open('https://www.twitter.com', '_blank');
+  };
+  
 
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzSz7wCUwumqYVFQGTLorOHWZCHa6Q-DKhuyrpEyb2vjW3qTbg0JasS272zwvVS0ddRLA/exec';
+  const formRef = useRef(null);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = formRef.current;
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form),
+    })
+      .then((response) => toast.success('Thank you! Your form is submitted successfully.'))
+      .then(() => window.location.reload())
+      .catch((error) => console.error('Error!', error.message));
+  };
+
+  // AKfycbxppY_x6Cw0FwJDBFMUQoWa7CIgqEN5-s3fnmoGNpU7
 return <div>
 
     
@@ -42,16 +72,29 @@ return <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
                     <li style={{ color: "white" }}>
-                        <a href="/Online" className="text-reset text-white">Ahashmi@live.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" className="text-reset text-white">Ahashmi@live.com</a>
+
+
                     </li>
                     <li style={{ color: "white" }}>
-                        <div className="d-flex justify-content-center gap-2">
-                            <i className="fa-brands fa-facebook-f mt-2"></i>
-                            <i className="fa-brands fa-linkedin-in mt-2"></i>
-                            <i className="fa-brands fa-twitter mt-2"></i>
-                            <i className="fa-solid fa-wifi mt-2"></i>
-                            <i className="fa-solid fa-lock mt-2"></i>
-                        </div>
+                    <div className="d-flex justify-content-center gap-2">
+                        
+                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                    
+                      
+                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                  
+                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+                                              <i className="fa-solid fa-wifi mt-2"></i>
+                                              <i 
+                        className="fa-solid fa-lock mt-2"
+                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
+                        onClick={()=>{
+                          move.push("/Login2");
+                        }}
+                      ></i>
+                                          </div>
+                  
                     </li>
                 </ul>
             </div>
@@ -160,14 +203,16 @@ If you have any unanswered questions, please let us know.
     {/* Video */}
     <div className="mt-3 d-flex justify-content-center " style={{ width: "100%" }}>
     <div style={{ width: "100%", height: "400px" }}>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9858177128634!2d-74.0894674845923!3d40.68978197933306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b009e0525bb%3A0x558490629df78b4b!2s24%20Pinecrest%20Rd%2C%20Jersey%20City%2C%20NJ%2007305!5e0!3m2!1sen!2sus!4v1696114109705!5m2!1sen!2sus" 
-    width="100%" 
-    height="100%" 
-    style={{ border: 0 }} 
-    allowFullScreen 
-    loading="lazy"
-  ></iframe>
+    <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.1181087769196!2d-74.03234788459302!3d40.71636807933227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b0209b6e2f%3A0x83aaf32c49e94546!2sExchange%20Place%2C%20Jersey%20City%2C%20NJ%2007302!5e0!3m2!1sen!2sus!4v1696603349651!5m2!1sen!2sus"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+></iframe>
+
+
 </div>
 
     </div>
@@ -192,37 +237,40 @@ If you have any unanswered questions, please let us know.
   className="d-flex flex-column justify-content-center align-items-center mt-3"
   style={{ width: "100%" }}
 >
+<form ref={formRef} name="product" onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '600px' }}>
   <div className="d-flex justify-content-between align-items-center gap-2 mt-3" style={{ width: "100%", maxWidth: "600px" }}>
     <h5 style={{ flex: "0 0 30%" }}>Name</h5>
-    <input className="form-control" style={{ flex: "1" }} />
+    <input name="name"  className="form-control" style={{ flex: "1" }} />
   </div>
 
   <div className="d-flex justify-content-between align-items-center gap-2 mt-3" style={{ width: "100%", maxWidth: "600px" }}>
     <h5 style={{ flex: "0 0 30%" }}>Email</h5>
-    <input className="form-control" style={{ flex: "1" }} />
+    <input name="email"   className="form-control" style={{ flex: "1" }} />
   </div>
 
   <div className="d-flex justify-content-between align-items-center gap-2 mt-3" style={{ width: "100%", maxWidth: "600px" }}>
     <h5 style={{ flex: "0 0 30%" }}>Phone Number</h5>
-    <input className="form-control" style={{ flex: "1" }} />
+    <input name="number"  className="form-control" style={{ flex: "1" }} />
   </div>
 
   <div className="d-flex justify-content-between align-items-center gap-2 mt-3" style={{ width: "100%", maxWidth: "600px" }}>
     <h5 style={{ flex: "0 0 30%" }}>Best Time To Call</h5>
-    <input className="form-control" style={{ flex: "1" }} />
+    <input name="time" className="form-control" style={{ flex: "1" }} />
   </div>
 
   <div className="d-flex justify-content-between align-items-center gap-2 mt-3" style={{ width: "100%", maxWidth: "600px" }}>
     <h5 style={{ flex: "0 0 30%" }}>Comments</h5>
-    <input className="form-control" style={{ flex: "1" }} />
+    <input  name="comments"  className="form-control" style={{ flex: "1" }} />
   </div>
 
   <button 
     className="btn btn-primary mt-4 px-4 h5"
+    type="submit"
     style={{ lineHeight: "30px", fontWeight: "500" }} 
   >
     Send
   </button>
+  </form>
 </div>
 
 

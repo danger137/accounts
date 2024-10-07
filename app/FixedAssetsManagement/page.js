@@ -1,13 +1,30 @@
+"use client";
 import Link from "next/link"
-
+import SubscriptionForm from "../checkoutForm/chechout";
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useRouter } from "next/navigation";
 
 
 export default function FixedAssetsManagement(){
 
 
+  let move = useRouter();
+  const stripePromise = loadStripe("pk_test_51PycwuP0ebickvSnk2QWol9dU5s4BDsNkiUYF5KjoUnNgjcazHmbLTVz1T97SFNm14rRhFRgyeOL37J3yddbj66X00di2vs6Gq");
 
 
+  const openFacebook = () => {
+    window.open('https://www.facebook.com', '_blank');
+  };
 
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com', '_blank');
+  };
+
+
+  const openTwitter = () => {
+    window.open('https://www.twitter.com', '_blank');
+  };
 
 
 
@@ -35,23 +52,36 @@ return <div>
             {/* Fourth Item with Increased Top Margin */}
             <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
                
-                <div>
-                    <ul className="list-unstyled pt-2 mb-0 text-center">
-                        <li style={{ color: "white" }}>T: 703-953-6184</li>
-                        <li style={{ color: "white" }}>
-                            <a href="/Online" className="text-reset text-white">Ahashmi@live.com</a>
-                        </li>
-                        <li style={{ color: "white" }}>
-                            <div className="d-flex justify-content-center gap-2">
-                                <i className="fa-brands fa-facebook-f mt-2"></i>
-                                <i className="fa-brands fa-linkedin-in mt-2"></i>
-                                <i className="fa-brands fa-twitter mt-2"></i>
-                                <i className="fa-solid fa-wifi mt-2"></i>
-                                <i className="fa-solid fa-lock mt-2"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div>
+                <ul className="list-unstyled pt-2 mb-0 text-center">
+                    <li style={{ color: "white" }}>T: 703-953-6184</li>
+                    <li style={{ color: "white" }}>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" className="text-reset text-white">Ahashmi@live.com</a>
+
+
+                    </li>
+                    <li style={{ color: "white" }}>
+                    <div className="d-flex justify-content-center gap-2">
+                        
+                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                    
+                      
+                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                  
+                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+                                              <i className="fa-solid fa-wifi mt-2"></i>
+                                              <i 
+                        className="fa-solid fa-lock mt-2"
+                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
+                        onClick={()=>{
+                          move.push("/Login2");
+                        }}
+                      ></i>
+                                          </div>
+                  
+                    </li>
+                </ul>
+            </div>
             </div>
         </div>
     </div>
@@ -62,32 +92,45 @@ return <div>
     </div>
     
     <div style={{ padding: "20px", color: "black" }} className="d-flex flex-column flex-md-row gap-3 justify-content-center   ">
-    <div className="mt-3 text-center text-md-start me-md-4"> {/* Increased right margin for more gap */}
-        <ul className="list-unstyled">
-          <li className="h5 mt-5 text-center text-md-end" style={{ color: "black", borderBottom: "2px solid #0078A5", paddingBottom: "10px", fontSize: "300" }}>
-            Quick Links:
-          </li>
+    <div className="mt-3 text-center text-md-start me-md-5"> {/* Increased right margin for more gap */}
+    <ul className="list-unstyled">
+
+
     
-          <li className="h5 text-center text-md-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer" }}>
-            Financial Calculators
-          </li>
-          <li className="h5 text-center text-md-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer" }}>
-            Send Us A File
-          </li>
-          <li className="h5 text-center text-md-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer" }}>
-            Track Your Refund
-          </li>
-          <li className="h5 text-center text-md-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer" }}>
-            IRS Tax Forms
-          </li>
-          <li className="h5 text-center text-md-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer" }}>
-            State Tax Forms
-          </li>
-          <li className="h5 text-center text-md-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer" }}>
-            Tax Due Dates
-          </li>
-        </ul>
-      </div>
+      <li className="h5 mt-5 text-center text-md-end" style={{ color: "black", borderBottom: "2px solid #0078A5", paddingBottom: "10px", fontSize: "300" }}>
+        Quick Links:
+      </li>
+      <li  className="text-lg-end mt-1 "  >
+      <Link href={"/FinancialCalculators"} className="h5 text-center text-lg-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer", textDecoration: "none" }}>
+      Financial Calculators
+</Link>
+      </li>
+
+      <li  className="text-lg-end mt-1 "  >
+      <Link href={"/SecureSend"} className="h5 text-center text-lg-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer", textDecoration: "none" }}>
+      Send Us A File
+</Link>
+      </li>
+      <li  className="text-lg-end mt-1 "  >
+      <Link href={"/IRS"} className="h5 text-center text-lg-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer", textDecoration: "none" }}>
+      IRS Tax Forms
+</Link>
+      </li>
+      <li  className="text-lg-end mt-1 "  >
+      <Link href={"/State"} className="h5 text-center text-lg-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer", textDecoration: "none" }}>
+      State Tax Forms
+</Link>
+      </li>
+      <li  className="text-lg-end mt-1 "  >
+      <Link href={"/TaxDueDate"} className="h5 text-center text-lg-end hover-text-gold" style={{ color: "#0078A5", fontWeight: "300", cursor: "pointer", textDecoration: "none" }}>
+      Tax Due Dates
+</Link>
+      </li>
+   
+  
+ 
+    </ul>
+  </div>
       
       <div id="octoberContainer" className=" text-center text-md-start"  >
     
@@ -228,7 +271,11 @@ return <div>
       </p>
     </div>
        
-    
+    <div className="  d-flex justify-content-center align-items-center vw-95">
+        <Elements stripe={stripePromise}>
+        <SubscriptionForm />
+      </Elements>
+</div>
       </div>
     </div>
     

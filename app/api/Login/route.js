@@ -29,13 +29,16 @@ if(user){
 
 
   const serect = new TextEncoder().encode(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJpSUQiOiI2NmI0YjE4NGJlZDIxZDdiYzk3NTJjY2IiLCJpYXQiOjE3MjMxNDU2NDYsImV4cCI6MTcyMzE1Mjg0Nn0.9BKAg466VXcePWmI-5zSeiuPFxyksFiC9H628UbQEJY"
+    "eyJhbGciOiJIUzI1NiJ9.eyJtZXJpSUQiOiI2NzAxYzgwYzRjMGM2ZjE1NTk3OGM1YzAifQ.cCqbP6vWvpmtXWGFWMuSwM8rPBy-GJq8lEv71LnTX84"
   )
  
 
-const tokken =  new  jose.SignJWT({meriID:user._id})
+const tokken =  await new  jose.SignJWT({meriID:user._id})
 .setProtectedHeader({alg:"HS256"})
 .sign(serect)
+
+console.log(tokken);
+
 
 return NextResponse.json({user,tokken});
 

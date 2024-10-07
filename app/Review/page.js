@@ -1,10 +1,30 @@
 "use client";
 
+import axios from "axios";
 import "./Review.css";
 import Link from "next/link";
 import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Review(){
+
+  
+  let move = useRouter();
+
+  const openFacebook = () => {
+    window.open('https://www.facebook.com', '_blank');
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com', '_blank');
+  };
+
+
+  const openTwitter = () => {
+    window.open('https://www.twitter.com', '_blank');
+  };
 
     const [hoveredStars, setHoveredStars] = useState(0);
   const [selectedStars, setSelectedStars] = useState(0);
@@ -23,6 +43,24 @@ export default function Review(){
     setSelectedStars(index);
     console.log(`Review submitted with ${index} stars!`);
   };
+
+
+let {register,handleSubmit} = useForm();
+
+const signup = (meraUser)=>{
+
+
+  meraUser.stras = selectedStars;
+
+axios.post("/api/Review",meraUser).then((resp)=>{
+
+  if(resp.data){
+    toast.success("Thans for  your review ")
+  }
+
+})
+
+}
 
 
 return <div>
@@ -50,20 +88,33 @@ return <div>
         {/* Fourth Item with Increased Top Margin */}
         <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
            
-            <div>
+        <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
                     <li style={{ color: "white" }}>
-                        <a href="/Online" className="text-reset text-white">Ahashmi@live.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" className="text-reset text-white">Ahashmi@live.com</a>
+
+
                     </li>
                     <li style={{ color: "white" }}>
-                        <div className="d-flex justify-content-center gap-2">
-                            <i className="fa-brands fa-facebook-f mt-2"></i>
-                            <i className="fa-brands fa-linkedin-in mt-2"></i>
-                            <i className="fa-brands fa-twitter mt-2"></i>
-                            <i className="fa-solid fa-wifi mt-2"></i>
-                            <i className="fa-solid fa-lock mt-2"></i>
-                        </div>
+                    <div className="d-flex justify-content-center gap-2">
+                        
+                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                    
+                      
+                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                  
+                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+                                              <i className="fa-solid fa-wifi mt-2"></i>
+                                              <i 
+                        className="fa-solid fa-lock mt-2"
+                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
+                        onClick={()=>{
+                          move.push("/Login2");
+                        }}
+                      ></i>
+                                          </div>
+                  
                     </li>
                 </ul>
             </div>
@@ -75,7 +126,7 @@ return <div>
     </div>
     
 </div>
-
+<form onSubmit={handleSubmit(signup)} >
 <div style={{ padding: "20px", color: "black" }} className="d-flex flex-column flex-md-row gap-1 justify-content-center   ">
 <div className="mt-3 text-center text-md-start me-md-5"> {/* Increased right margin for more gap */}
     <ul className="list-unstyled">
@@ -170,10 +221,12 @@ return <div>
   Click on a star to change your rating 1 - 5, where 5 = great! and 1 = room for <br></br> improvement
   </p>
   <div className="d-md-flex flex-column flex-md-row" style={{ gap: "20px" }}>
+ 
   <div className="d-flex align-items-end" style={{ gap: "10px" }}>
     <p className="h5 mb-0" style={{ fontWeight: "300" }}>Your Review:</p>
     <textarea 
       placeholder="Your Review" 
+      {...register("review",{required:true})}
       style={{ height: "220px", padding: "10px", verticalAlign: "top", resize: "none" }} 
     />
   </div>
@@ -193,6 +246,7 @@ return <div>
   </p>
   <input 
   placeholder="First Name" 
+  {...register("name",{required:true})}
   style={{ textAlign: "left", width: "100%", maxWidth: "200px",borderRadius: "5px", border: "1px solid #ccc" }} 
 />
 
@@ -204,6 +258,7 @@ return <div>
     City:
   </p>
   <input 
+  {...register("city",{required:true})}
   placeholder="City" 
   style={{ textAlign: "left", width: "100%", maxWidth: "200px",borderRadius: "5px", border: "1px solid #ccc" }} 
 />
@@ -215,6 +270,7 @@ return <div>
     Email:
   </p>
   <input 
+  {...register("email",{required:true})}
   placeholder="Email" 
   style={{ textAlign: "left", width: "100%", maxWidth: "200px",borderRadius: "5px", border: "1px solid #ccc" }} 
 />
@@ -232,9 +288,10 @@ return <div>
 />
 </div>
 <div className="mt-3 gap-2 d-md-flex "  >
-<button>Submit My Review</button>
+<button type="submit" >Submit My Review</button>
 <p className="h5" style={{fontWeight:"100"}} >By clicking Submit, I authorize the sharing of my name and</p>
 </div>
+
 <div>
 <p className="h5" style={{fontWeight:"100"}} >review on the web. (email will not be shared)</p>
 </div>
@@ -242,6 +299,7 @@ return <div>
  <p className="h3 mt-4 " style={{fontWeight:"400",lineHeight:"30px",color:"#0078A5"}} >
  Read what others have to say:
   </p>
+  
   <div className="container text-center">
   <div className="mt-4 d-flex justify-content-center flex-wrap" style={{ gap: '5px' }}>
     <svg
@@ -304,7 +362,7 @@ return <div>
 
 </div>
 
-
+</form>
 
 </div>
 

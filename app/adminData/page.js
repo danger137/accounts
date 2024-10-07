@@ -35,11 +35,29 @@ axios.get("api/Signup").then((resp)=>{
 })
 
 },[])
+    let [users2,setUsers2] = useState([]);
+
+useEffect(()=>{
+
+axios.get("api/subscription").then((resp)=>{
+  setUsers2(resp.data.users);
+})
+
+},[])
+    let [users3,setUsers3] = useState([]);
+
+useEffect(()=>{
+
+axios.get("api/Review").then((resp)=>{
+  setUsers3(resp.data.users);
+})
+
+},[])
 // let users = useSelector((store)=>{
 //   return store.users;
 // })
 return <div>
-    <div className="container">
+    {/* <div className="container">
   <div className="row">
     <div className="col-md-12">
       <div className="card">
@@ -172,10 +190,284 @@ return <tr key={meraIndex} >
       </div>
     </div>
   </div>
+</div> */}
+
+
+<div className="container">
+  <div className="row">
+    <div className="col-md-12">
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title text-uppercase mb-0">Manage Subscription Users</h5>
+        </div>
+        <div className="table-responsive">
+          <table className="table no-wrap user-table mb-0">
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                  className="border-0 text-uppercase font-medium pl-4"
+                >
+                  #
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Name
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Company
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Email
+                </th>
+              
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Category
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Manage
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            {
+                users2.map((user,meraIndex)=>{
+return <tr key={meraIndex} >
+      <td className="pl-4">1</td>
+                <td>
+                  <h5 className="font-medium mb-0">{user.fullName}</h5>
+                </td>
+                <td>
+                <h5 className="font-medium mb-0">{user.CompanyName}</h5>
+              
+                </td>
+                <td>
+                <h5 className="font-medium mb-0">{user.email}</h5>
+                
+                </td>
+              
+                <td>
+                  <select
+                    className="form-control category-select"
+                    id="exampleFormControlSelect1"
+                  >
+                    <option>Modulator</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                    <option>Subscriber</option>
+                  </select>
+                </td>
+                <td>
+                  <button
+                  id="btn4"
+                    type="button"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle"
+                    onClick={()=>{
+                        // dispatch(removeUser(meraIndex));
+                        axios.delete('/api/Signup?abc='+user._id)
+                        
+                    }}
+                  >
+                     <i className="fa fa-trash" />{" "}
+                 
+                  </button>
+                  <button
+                    type="button"
+                    id="btn4"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"
+                    onClick={()=>{
+                       
+                      //  dispatch(updateUser({
+                      //   email,
+                      //   meraIndex
+                      //  }))
+                      user.Email = prompt("Email");
+                     axios.put("/api/Signup",user).then((resp)=>{
+                      
+                     })
+                  
+
+                    }}
+                  >
+                  <i className="fa fa-edit" />{" "}
+                
+                   
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"
+                  >
+                  <i className="fa fa-key" />{" "}
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"
+                  >
+                    <i className="fa fa-upload" />{" "}
+                    
+                  </button>
+                </td>
+</tr>
+                })
+            }
+
+           
+            
+             
+            
+           
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div className="container mb-5 ">
+  <div className="row">
+    <div className="col-md-12">
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title text-uppercase mb-0">Manage Review Users</h5>
+        </div>
+        <div className="table-responsive">
+          <table className="table no-wrap user-table mb-0">
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                  className="border-0 text-uppercase font-medium pl-4"
+                >
+                  #
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Name
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  City
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Email
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Stars
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Reviews
+                </th>
+              
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Category
+                </th>
+                <th scope="col" className="border-0 text-uppercase font-medium">
+                  Manage
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            {
+                users3.map((user,meraIndex)=>{
+return <tr key={meraIndex} >
+      <td className="pl-4">1</td>
+                <td>
+                  <h5 className="font-medium mb-0">{user.name}</h5>
+                </td>
+                <td>
+                <h5 className="font-medium mb-0">{user.city}</h5>
+              
+                </td>
+                <td>
+                <h5 className="font-medium mb-0">{user.email}</h5>
+                
+                </td>
+                <td>
+                <h5 className="font-medium mb-0">{user.stras}</h5>
+                
+                </td>
+                <td>
+                <h5 className="font-medium mb-0">{user.review}</h5>
+                
+                </td>
+              
+                <td>
+                  <select
+                    className="form-control category-select"
+                    id="exampleFormControlSelect1"
+                  >
+                    <option>Modulator</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                    <option>Subscriber</option>
+                  </select>
+                </td>
+                <td>
+                  <button
+                  id="btn4"
+                    type="button"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle"
+                    onClick={()=>{
+                        // dispatch(removeUser(meraIndex));
+                        axios.delete('/api/Signup?abc='+user._id)
+                        
+                    }}
+                  >
+                     <i className="fa fa-trash" />{" "}
+                 
+                  </button>
+                  <button
+                    type="button"
+                    id="btn4"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"
+                    onClick={()=>{
+                       
+                      //  dispatch(updateUser({
+                      //   email,
+                      //   meraIndex
+                      //  }))
+                      user.Email = prompt("Email");
+                     axios.put("/api/Signup",user).then((resp)=>{
+                      
+                     })
+                  
 
+                    }}
+                  >
+                  <i className="fa fa-edit" />{" "}
+                
+                   
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"
+                  >
+                  <i className="fa fa-key" />{" "}
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"
+                  >
+                    <i className="fa fa-upload" />{" "}
+                    
+                  </button>
+                </td>
+</tr>
+                })
+            }
 
+           
+            
+             
+            
+           
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
  
 
 

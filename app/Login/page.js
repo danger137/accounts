@@ -23,6 +23,9 @@ let login1 =  ()=>{
 
   function Login(){
 
+
+    
+
   let dispatch = useDispatch()
   
   let {register,handleSubmit,formState:{errors}} = useForm();
@@ -42,7 +45,7 @@ let login1 =  ()=>{
         toast.success("login done");
         move.push("/Services");
         dispatch(setUser(resp.data.user));
-        localStorage.setItem("token",resp.data.token);
+       localStorage.setItem("sometokken",resp.data.tokken);
       }
     })
     
