@@ -1,4 +1,4 @@
-
+"use client";
 import "./Value.css";
 import Link from "next/link";
 
