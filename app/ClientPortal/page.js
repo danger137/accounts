@@ -14,16 +14,7 @@ export default function Client(){
   let move = useRouter();
 
   const openFacebook = () => {
-    window.open('https://www.facebook.com', '_blank');
-  };
-
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com', '_blank');
-  };
-
-
-  const openTwitter = () => {
-    window.open('https://www.twitter.com', '_blank');
+    window.open('https://web.facebook.com/people/Muhammad-Nadeem/pfbid0JZHDCWzRLG9VhxgkATTv1rp5yUQpEfPL9H7vz5j8fWdXFKPHtSxrUmYvt9Nuh1Zwl/?mibextid=ZbWKwL', '_blank');
   };
     
  
@@ -54,7 +45,9 @@ return <div>
         {/* Fourth Item with Increased Top Margin */}
         <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
            
-        <div>
+        <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
+            <i className="fa-solid fa-message"></i>
+            <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
                     <li style={{ color: "white" }}>
@@ -65,25 +58,27 @@ return <div>
                     <li style={{ color: "white" }}>
                     <div className="d-flex justify-content-center gap-2">
                         
-                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                        <i style={{cursor:"pointer"}} onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
                     
                       
-                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                                            
+                        <a href="https://wa.me/17039536184" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-whatsapp mt-2 " style={{ color: 'white' }}></i>
+</a>
+
                   
-                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
+</a>
+
                                               <i className="fa-solid fa-wifi mt-2"></i>
-                                              <i 
-                        className="fa-solid fa-lock mt-2"
-                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
-                        onClick={()=>{
-                          move.push("/Login2");
-                        }}
-                      ></i>
+               
                                           </div>
                   
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -191,7 +186,7 @@ return <div>
           <p className="h5 mb-0" style={{lineHeight: "30px", fontWeight: "300"}}>
             portal
           </p>
-          <Link href={""} className="h5 mx-1" style={{lineHeight: "30px", fontWeight: "300"}}>
+          <Link href={"/SecurityMeasures"} className="h5 mx-1" style={{lineHeight: "30px", fontWeight: "300"}}>
             security measures.
           </Link>
           <p className="h5 mb-0" style={{lineHeight: "30px", fontWeight: "300"}}>
@@ -201,19 +196,14 @@ return <div>
       </div>
     </div>
 
-    {/* Registration and Login */}
-    <div className="mt-3 d-flex flex-column align-items-center align-items-lg-start" style={{ width: "100%" }}>
-      <div style={{lineHeight: "30px", fontWeight: "300"}} className="d-md-flex gap-2 text-center text-lg-start">
-        <p className="h5" style={{lineHeight: "30px", fontWeight: "300"}}>To start using the client portal please log in above or</p>
-        <Link href={""} className="h5" style={{lineHeight: "30px", fontWeight: "300"}}>register here.</Link>
-      </div>
-    </div>
+
+
 
     {/* SecureSend Link */}
     <div className="mt-3 d-flex flex-column align-items-center align-items-lg-start" style={{ width: "100%" }}>
       <div style={{lineHeight: "30px", fontWeight: "300"}} className="d-md-flex gap-2 text-center text-lg-start">
         <p className="h5" style={{lineHeight: "30px", fontWeight: "300"}}>To send a file without creating an account use the</p>
-        <Link href={""} className="h5" style={{lineHeight: "30px", fontWeight: "300"}}>SecureSend page.</Link>
+        <Link href={"/SecureSend"} className="h5" style={{lineHeight: "30px", fontWeight: "300"}}>SecureSend page.</Link>
       </div>
     </div>
 

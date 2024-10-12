@@ -7,23 +7,14 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { useRef } from "react";
 
 export default function Review(){
 
   
   let move = useRouter();
-
   const openFacebook = () => {
-    window.open('https://www.facebook.com', '_blank');
-  };
-
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com', '_blank');
-  };
-
-
-  const openTwitter = () => {
-    window.open('https://www.twitter.com', '_blank');
+    window.open('https://web.facebook.com/people/Muhammad-Nadeem/pfbid0JZHDCWzRLG9VhxgkATTv1rp5yUQpEfPL9H7vz5j8fWdXFKPHtSxrUmYvt9Nuh1Zwl/?mibextid=ZbWKwL', '_blank');
   };
 
     const [hoveredStars, setHoveredStars] = useState(0);
@@ -45,22 +36,41 @@ export default function Review(){
   };
 
 
-let {register,handleSubmit} = useForm();
+let {register} = useForm();
 
-const signup = (meraUser)=>{
+// const signup = (meraUser)=>{
 
 
-  meraUser.stras = selectedStars;
+//   meraUser.stras = selectedStars;
 
-axios.post("/api/Review",meraUser).then((resp)=>{
+// axios.post("/api/Review",meraUser).then((resp)=>{
 
-  if(resp.data){
-    toast.success("Thans for  your review ")
-  }
+//   if(resp.data){
+//     toast.success("Thans for  your review ")
+//   }
 
-})
+// })
 
-}
+// }
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyx48A8s4HO4zy6NkiO6HTiwl4qtQjkiVOnP3FCdAyj2Q0c0BGSc50vtyAGGOgoXswm/exec';
+const formRef = useRef(null);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  const form = formRef.current;
+  form.stars = selectedStars;
+  console.log(form);
+  
+
+  fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form),
+  })
+    .then((response) => toast.success("Thanks for your reviews"))
+    .then(() => window.location.reload())
+    .catch((error) => console.error('Error!', error.message));
+};
 
 
 return <div>
@@ -88,7 +98,9 @@ return <div>
         {/* Fourth Item with Increased Top Margin */}
         <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
            
-        <div>
+        <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
+            <i className="fa-solid fa-message"></i>
+            <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
                     <li style={{ color: "white" }}>
@@ -99,25 +111,27 @@ return <div>
                     <li style={{ color: "white" }}>
                     <div className="d-flex justify-content-center gap-2">
                         
-                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                        <i style={{cursor:"pointer"}} onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
                     
                       
-                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                                            
+                        <a href="https://wa.me/17039536184" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-whatsapp mt-2 " style={{ color: 'white' }}></i>
+</a>
+
                   
-                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
+</a>
+
                                               <i className="fa-solid fa-wifi mt-2"></i>
-                                              <i 
-                        className="fa-solid fa-lock mt-2"
-                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
-                        onClick={()=>{
-                          move.push("/Login2");
-                        }}
-                      ></i>
+               
                                           </div>
                   
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -126,7 +140,7 @@ return <div>
     </div>
     
 </div>
-<form onSubmit={handleSubmit(signup)} >
+<form ref={formRef} name="product" onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '600px' }}> 
 <div style={{ padding: "20px", color: "black" }} className="d-flex flex-column flex-md-row gap-1 justify-content-center   ">
 <div className="mt-3 text-center text-md-start me-md-5"> {/* Increased right margin for more gap */}
     <ul className="list-unstyled">
@@ -224,8 +238,9 @@ return <div>
  
   <div className="d-flex align-items-end" style={{ gap: "10px" }}>
     <p className="h5 mb-0" style={{ fontWeight: "300" }}>Your Review:</p>
-    <textarea 
+    <textarea
       placeholder="Your Review" 
+       name="Review"
       {...register("review",{required:true})}
       style={{ height: "220px", padding: "10px", verticalAlign: "top", resize: "none" }} 
     />
@@ -245,6 +260,7 @@ return <div>
     First Name:
   </p>
   <input 
+  name="name"
   placeholder="First Name" 
   {...register("name",{required:true})}
   style={{ textAlign: "left", width: "100%", maxWidth: "200px",borderRadius: "5px", border: "1px solid #ccc" }} 
@@ -257,7 +273,9 @@ return <div>
     <p className="h5  " style={{fontWeight:"300",lineHeight:"30px"}} >
     City:
   </p>
-  <input 
+
+  <input
+  name="city" 
   {...register("city",{required:true})}
   placeholder="City" 
   style={{ textAlign: "left", width: "100%", maxWidth: "200px",borderRadius: "5px", border: "1px solid #ccc" }} 
@@ -272,6 +290,7 @@ return <div>
   <input 
   {...register("email",{required:true})}
   placeholder="Email" 
+  name="Email"
   style={{ textAlign: "left", width: "100%", maxWidth: "200px",borderRadius: "5px", border: "1px solid #ccc" }} 
 />
 

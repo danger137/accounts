@@ -12,16 +12,7 @@ export default function Sendfile(){
   let move = useRouter();
     
   const openFacebook = () => {
-    window.open('https://www.facebook.com', '_blank');
-  };
-
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com', '_blank');
-  };
-
-
-  const openTwitter = () => {
-    window.open('https://www.twitter.com', '_blank');
+    window.open('https://web.facebook.com/people/Muhammad-Nadeem/pfbid0JZHDCWzRLG9VhxgkATTv1rp5yUQpEfPL9H7vz5j8fWdXFKPHtSxrUmYvt9Nuh1Zwl/?mibextid=ZbWKwL', '_blank');
   };
 
 
@@ -50,7 +41,9 @@ return <div>
         {/* Fourth Item with Increased Top Margin */}
         <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
            
-        <div>
+        <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
+            <i className="fa-solid fa-message"></i>
+            <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
                     <li style={{ color: "white" }}>
@@ -61,25 +54,27 @@ return <div>
                     <li style={{ color: "white" }}>
                     <div className="d-flex justify-content-center gap-2">
                         
-                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                        <i style={{cursor:"pointer"}} onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
                     
                       
-                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                                            
+                        <a href="https://wa.me/17039536184" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-whatsapp mt-2 " style={{ color: 'white' }}></i>
+</a>
+
                   
-                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
+</a>
+
                                               <i className="fa-solid fa-wifi mt-2"></i>
-                                              <i 
-                        className="fa-solid fa-lock mt-2"
-                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
-                        onClick={()=>{
-                          move.push("/Login2");
-                        }}
-                      ></i>
+               
                                           </div>
                   
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -173,9 +168,14 @@ return <div>
     <p className="h5 mb-0 text-center text-md-start" style={{lineHeight: "30px", fontWeight: "500"}}>
       Securely Send Us a File
     </p>
-    <button style={{lineHeight: "30px", fontWeight: "500"}} className="px-3 h5 mt-2 ">
-      Launch
-    </button>
+    <button
+  style={{ lineHeight: "30px", fontWeight: "500" }}
+  className="px-3 h5 mt-2"
+  onClick={() => window.location.href = 'https://wa.me/923006637352'}
+>
+  Launch
+</button>
+
   </div>
 </div>
 
@@ -186,27 +186,11 @@ return <div>
       Use our convenient SecureSend page to securely deliver a file directly to a member of our firm. The selected firm member will be notified once your file upload is complete.
       </p>
     </div>
-    <div className="d-flex justify-content-center  mt-5 justify-content-lg-start" style={{ width: "100%" }}>
-  <p className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "50vw"}}>
-    Alternatively, you may also 
-    <Link href="/login" className="h5 mx-1" style={{textDecoration: "underline", fontWeight: "300"}}>
-      login
-    </Link> 
-    to our Secure Client Portal to send us a file. If you do not currently have a Portal Account, you may 
-   
-      register
-    
-    for one  <Link href="/register" className="h5 mx-1" style={{textDecoration: "underline", fontWeight: "300"}}>here</Link>.
-  </p>
-</div>
+
 
 <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start mt-5 mb-5 pb-5" style={{ width: "100%" }}>
     <div className="mt-3">
-  <div className="d-flex flex-column flex-md-row gap-2 justify-content-center align-items-center" style={{lineHeight: "30px", fontWeight: "300", width: "100%"}}>
-    <button style={{lineHeight: "30px", fontWeight: "500"}} className="px-3 h5  ">
-      Send Us a  File
-    </button>
-  </div>
+
 </div>
 
 </div>

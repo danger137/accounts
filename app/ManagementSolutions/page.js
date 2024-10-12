@@ -13,16 +13,7 @@ export default function  ManagementSolutions(){
   let move = useRouter();
 
   const openFacebook = () => {
-    window.open('https://www.facebook.com', '_blank');
-  };
-
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com', '_blank');
-  };
-
-
-  const openTwitter = () => {
-    window.open('https://www.twitter.com', '_blank');
+    window.open('https://web.facebook.com/people/Muhammad-Nadeem/pfbid0JZHDCWzRLG9VhxgkATTv1rp5yUQpEfPL9H7vz5j8fWdXFKPHtSxrUmYvt9Nuh1Zwl/?mibextid=ZbWKwL', '_blank');
   };
 
 
@@ -54,6 +45,8 @@ return <div>
             {/* Fourth Item with Increased Top Margin */}
             <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
                
+            <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
+            <i className="fa-solid fa-message"></i>
             <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
@@ -65,25 +58,27 @@ return <div>
                     <li style={{ color: "white" }}>
                     <div className="d-flex justify-content-center gap-2">
                         
-                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                        <i style={{cursor:"pointer"}} onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
                     
                       
-                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                                            
+                        <a href="https://wa.me/17039536184" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-whatsapp mt-2 " style={{ color: 'white' }}></i>
+</a>
+
                   
-                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
+</a>
+
                                               <i className="fa-solid fa-wifi mt-2"></i>
-                                              <i 
-                        className="fa-solid fa-lock mt-2"
-                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
-                        onClick={()=>{
-                          move.push("/Login2");
-                        }}
-                      ></i>
+               
                                           </div>
                   
                     </li>
                 </ul>
             </div>
+        </div>
             </div>
         </div>
     </div>
@@ -273,14 +268,22 @@ return <div>
         Management solutions play a vital role in enhancing organizational performance and ensuring strategic alignment. By focusing on areas such as strategic planning, performance management, and risk mitigation, these solutions empower businesses to navigate challenges and achieve sustainable growth in today’s competitive landscape.
       </p>
     </div>
-    <div className="  d-flex justify-content-center align-items-center vw-95">
-        <Elements stripe={stripePromise}>
-        <SubscriptionForm />
-      </Elements>
-</div>
+    <div className="d-flex justify-content-center justify-content-lg-start mt-4" style={{ width: "100%" }}>
+        <p className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>
+        If you want to buy this service Click below the button
+</p>
+
+        </div>
     
     
       </div>
+      
+      <div className="d-flex justify-content-center mt-5 mb-5">
+      <Link href={"/Contact"} className="form-button" style={{ textDecoration: 'none', borderBottom: 'none' }}>
+  Subscribe Now
+</Link>
+
+</div>
     </div>
     
     

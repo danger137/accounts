@@ -91,7 +91,8 @@ return <div>
                             <i className="fa-brands fa-linkedin-in mt-2"></i>
                             <i className="fa-brands fa-twitter mt-2"></i>
                             <i className="fa-solid fa-wifi mt-2"></i>
-                            <i className="fa-solid fa-lock mt-2"></i>
+                         
+                         
                         </div>
                     </li>
                 </ul>

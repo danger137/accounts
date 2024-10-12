@@ -18,9 +18,21 @@ export default function SubscriptionForm() {
 
   // Define product price IDs
   const productPriceIds = {
-    product1: 'price_1PzcgBP0ebickvSnmhn7bc5g',
-    product2: 'price_1PzcjJP0ebickvSnyn03W4PW',
-    product3: 'price_1PzclGP0ebickvSn0LwlyJ7A',
+    product1: 'price_1Q9CDEP0ebickvSnQHUu2u9u',
+    product2: 'price_1Q9CG2P0ebickvSnDxL0UM3w',
+    product3: 'price_1Q9CJ2P0ebickvSnocEo6Mke',
+    product4: 'price_1Q9CK7P0ebickvSn8n3C8h8x',
+    product5: 'price_1Q9CKyP0ebickvSn5Aip2vFj',
+    product6: 'price_1Q9CMrP0ebickvSnWMwCpNBK',
+    product7: 'price_1Q9COnP0ebickvSnknrRIzKp',
+    product8: 'price_1Q9CQKP0ebickvSnnwzoOOM2',
+    product9: 'price_1Q9CRMP0ebickvSnTSbpdW2B',
+    product10: 'price_1Q9CS2P0ebickvSnYF1qFWcR',
+    product11: 'price_1Q9CSqP0ebickvSnx6oBhH2y',
+    product12: 'price_1Q9CTpP0ebickvSndel0Pxrw',
+    product13: 'price_1Q9CUwP0ebickvSn4JJWUOwy',
+    product14: 'price_1Q9CVcP0ebickvSn7jw61lUE',
+    product15: 'price_1Q9CW7P0ebickvSno26WMn0R',
   };
 
 
@@ -152,9 +164,21 @@ export default function SubscriptionForm() {
         required
       >
         <option value="">Choose a plan...</option>
-        <option value="product1">All Quran Course - $30/month</option>
-        <option value="product2">Hafza Quran - $50/month</option>
-        <option value="product3">Quran with Tafseer - $50/month</option>
+        <option value="product1">Book keeping- $150/month</option>
+        <option value="product2">Tax practices - $200/month</option>
+        <option value="product3">Internal controls - $150/month</option>
+        <option value="product4">Internal Auditing- $150/month</option>
+        <option value="product5">External Audits - $150/month</option>
+        <option value="product6">Fixed Assets Management - $1000/month</option>
+        <option value="product7">Secerterial practices - $400/month</option>
+        <option value="product8">Corporate solutions - $300/month</option>
+        <option value="product9">Management Solutions - $300/month</option>
+        <option value="product10">IRS - $100/month</option>
+        <option value="product11">Tax returns indibiduals, corporate returns - $200/month</option>
+        <option value="product12">Payroll Management systems - $300/month</option>
+        <option value="product13">Feasibility of new projects - $5000/month</option>
+        <option value="product14">Acuiquistions and mergers - $300/month</option>
+        <option value="product15">Investment portfolio - $450/month</option>
       </select>
     </div>
     <div className="form-group">

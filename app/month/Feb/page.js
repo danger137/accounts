@@ -112,13 +112,13 @@ return <div>
                   
                                               <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
                                               <i className="fa-solid fa-wifi mt-2"></i>
-                                              <i 
+                                              {/* <i 
                         className="fa-solid fa-lock mt-2"
                         style={{ cursor: 'pointer' }} // To indicate the icon is clickable
                         onClick={()=>{
                           move.push("/Login2");
                         }}
-                      ></i>
+                      ></i> */}
                                           </div>
                   
                     </li>

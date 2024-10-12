@@ -8,24 +8,20 @@ import { toast } from "react-toastify";
 
 
 import { useRouter } from "next/navigation";
+import { Elements } from "@stripe/react-stripe-js";
+import SubscriptionForm from "../checkoutForm/chechout";
+import { loadStripe } from "@stripe/stripe-js";
 
 export default function Contact(){
 
-  
+   const stripePromise = loadStripe("pk_test_51PycwuP0ebickvSnk2QWol9dU5s4BDsNkiUYF5KjoUnNgjcazHmbLTVz1T97SFNm14rRhFRgyeOL37J3yddbj66X00di2vs6Gq");
   let move = useRouter();
 
   const openFacebook = () => {
-    window.open('https://www.facebook.com', '_blank');
-  };
-
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com', '_blank');
+    window.open('https://web.facebook.com/people/Muhammad-Nadeem/pfbid0JZHDCWzRLG9VhxgkATTv1rp5yUQpEfPL9H7vz5j8fWdXFKPHtSxrUmYvt9Nuh1Zwl/?mibextid=ZbWKwL', '_blank');
   };
 
 
-  const openTwitter = () => {
-    window.open('https://www.twitter.com', '_blank');
-  };
   
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzSz7wCUwumqYVFQGTLorOHWZCHa6Q-DKhuyrpEyb2vjW3qTbg0JasS272zwvVS0ddRLA/exec';
@@ -68,6 +64,8 @@ return <div>
         {/* Fourth Item with Increased Top Margin */}
         <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
            
+        <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
+            <i className="fa-solid fa-message"></i>
             <div>
                 <ul className="list-unstyled pt-2 mb-0 text-center">
                     <li style={{ color: "white" }}>T: 703-953-6184</li>
@@ -79,25 +77,27 @@ return <div>
                     <li style={{ color: "white" }}>
                     <div className="d-flex justify-content-center gap-2">
                         
-                        <i onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
+                        <i style={{cursor:"pointer"}} onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
                     
                       
-                        <i onClick={openLinkedIn} className="fa-brands fa-linkedin-in mt-2"></i>
+                                            
+                        <a href="https://wa.me/17039536184" target="_blank" rel="noopener noreferrer">
+    <i className="fa-brands fa-whatsapp mt-2 " style={{ color: 'white' }}></i>
+</a>
+
                   
-                                              <i onClick={openTwitter}  className="fa-brands fa-twitter mt-2"></i>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
+</a>
+
                                               <i className="fa-solid fa-wifi mt-2"></i>
-                                              <i 
-                        className="fa-solid fa-lock mt-2"
-                        style={{ cursor: 'pointer' }} // To indicate the icon is clickable
-                        onClick={()=>{
-                          move.push("/Login2");
-                        }}
-                      ></i>
+               
                                           </div>
                   
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>
 </div>
@@ -193,6 +193,7 @@ If you have any unanswered questions, please let us know.
       
     </div>
     </div>
+    
 
     {/* Third Paragraph */}
   
@@ -271,6 +272,19 @@ If you have any unanswered questions, please let us know.
     Send
   </button>
   </form>
+</div>
+<div 
+  className="d-flex flex-column justify-content-center align-items-center mt-3"
+  style={{ width: "100%" }}
+>
+
+  <div className="d-flex justify-content-between align-items-center gap-2 mt-3" style={{ width: "100%", maxWidth: "600px" }}>
+  <Elements stripe={stripePromise}>
+        <SubscriptionForm />
+      </Elements>
+  </div>
+
+
 </div>
 
 

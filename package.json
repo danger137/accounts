@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.7.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@stripe/react-stripe-js": "^2.8.1",
     "@stripe/stripe-js": "^4.7.0",
     "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
     "jose": "^5.9.3",
     "jsonwebtoken": "^9.0.2",
