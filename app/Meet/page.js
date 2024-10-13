@@ -141,17 +141,36 @@ return <div>
   </div>
   <div className="mt-3 text-center text-md-start"> {/* Center text on small screens and align left on medium and larger screens */}
   <ul className="list-unstyled">
-   <div className="d-md-flex" >
-    <div>
-    <img style={{width:"400px",height:"424px"}} className="mt-4" src="/WhatsApp Image 2024-10-03 at 06.40.14.jpeg" >
-    </img>
-    </div>
-    <div>
-        <p className="h4 pt-3 ps-4" style={{color:"#0078A5",fontWeight:"400"}} >MANAGING PARTNER - <br></br>  NATANEL BENISTI, CPA</p>
-        <p className="h5 mt-3 ms-4 " style={{fontWeight:"300",lineHeight:"30px"}} >Natanel Benisti, is a seasoned <br></br> financial professional with over a <br></br> decade of experience in tax, <br></br> advisory, and back-office <br></br> accounting services. He <br></br> graduated with a BA in <br></br> Accounting from Baruch College <br></br> and an MS in Taxation from <br></br> Zicklin School of Business. <br></br> Natanel specializes in Virtual CFO <br></br> services for small/medium <br></br> businesses, with other areas of</p>
-    </div>
+  <div className="d-md-flex flex-column flex-md-row align-items-center">
+  <div className="text-center  ">
+    <img
+      style={{ width: "400px", height: "424px" }}
+      className="mt-4"
+      src="/WhatsApp Image 2024-10-03 at 06.40.14.jpeg"
+      alt="Natanel Benisti"
+    />
+  </div>
+  <div className="text-md-start">
+    <p className="h4 pt-3 ps-4" style={{ color: "#0078A5", fontWeight: "400" }}>
+      MANAGING PARTNER - <br /> NATANEL BENISTI, CPA
+    </p>
+    <p className="h5 mt-3 ms-4" style={{ fontWeight: "300", lineHeight: "30px" }}>
+      Natanel Benisti is a seasoned <br />
+      financial professional with over a <br />
+      decade of experience in tax, <br />
+      advisory, and back-office <br />
+      accounting services. He <br />
+      graduated with a BA in <br />
+      Accounting from Baruch College <br />
+      and an MS in Taxation from <br />
+      Zicklin School of Business. <br />
+      Natanel specializes in Virtual CFO <br />
+      services for small/medium <br />
+      businesses, with other areas of
+    </p>
+  </div>
+</div>
 
-   </div>
  <div>
   <p className="h5" style={{fontWeight:"300",lineHeight:"30px"}} >
   focus including tax preparation for industries such as Real Estate, Professional <br></br> Services, Retail/Wholesale, online businesses, as well as international taxpayers and <br></br> expats. Natanel works with clients across the United States, delivering expert <br></br> guidance on everything from tax strategy and financial reporting to business <br></br> planning and growth strategy.
@@ -168,11 +187,11 @@ return <div>
   <p className="h2 pt-3 text-center" style={{color:"#0078A5",fontWeight:"400"}} >Staff Members</p>
  </div>
  <div className="d-md-flex gap-5 " >
-    <div>
+    <div  className="d-flex-justify-content-centr" >
     <img style={{width:"400px",height:"424px"}} className="mt-4" src="/WhatsApp Image 2024-10-03 at 06.58.19.jpeg" >
     </img>
     </div>
-    <div>
+    <div  className="d-flex-justify-content-centr"  >
     <img style={{width:"400px",height:"424px"}} className="mt-4" src="/WhatsApp Image 2024-10-03 at 06.38.51.jpeg" >
     </img>
     </div>

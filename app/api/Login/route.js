@@ -37,7 +37,7 @@ const tokken =  await new  jose.SignJWT({meriID:user._id})
 .setProtectedHeader({alg:"HS256"})
 .sign(serect)
 
-console.log(tokken);
+
 
 
 return NextResponse.json({user,tokken});

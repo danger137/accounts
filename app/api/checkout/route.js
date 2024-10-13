@@ -19,7 +19,7 @@ export async function POST(req) {
     });
 
     // Log subscription data to server console
-    console.log('Subscription created:', subscription);
+ 
 
     return new Response(JSON.stringify(subscription), { status: 200 });
   } catch (error) {

@@ -30,7 +30,7 @@ return new Promise(function(_then,_catch){
 export async  function PUT(req,res){
 
     let user = await req.json();
-    console.log(user);
+ 
     await User.findByIdAndUpdate(user._id, user);
      
      return NextResponse.json({
@@ -75,7 +75,7 @@ return NextResponse.json({
 
 export async  function POST(req,res){
     let data = await req.json();
-    console.log(data);
+
     
 
      

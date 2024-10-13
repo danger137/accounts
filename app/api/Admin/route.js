@@ -38,7 +38,7 @@ export async  function POST(req,res){
 
  
 let data = await req.formData();
-console.log(data);
+
 
 let userAds = {
     Email:data.get("Email"),

@@ -30,10 +30,12 @@ return <div>
         <div class="bottom-overlay">
         <div className="container">
         <div className="row text-center text-md-start">
-            <div className="col mb-3 d-flex align-items-center">
-            <p style={{ fontWeight: "100", whiteSpace: "nowrap" }} className="h1 ms-4">Payroll Management Systems</p>
-    
-            </div>
+        <div className="col mb-3 d-flex align-items-center text-start">
+    <p style={{ fontWeight: "100", whiteSpace: "nowrap" }} className="h1 ms-4">
+        Payroll Management Systems
+    </p>
+</div>
+
     
             <div className="col mb-3 d-flex align-items-center mt-3 gap-3">
              

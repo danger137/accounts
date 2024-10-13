@@ -59,7 +59,7 @@ export async  function GET(req,res){
 
 let user = await  User.find();
 
-console.log(user);
+
 
 
 return NextResponse.json({
@@ -115,7 +115,7 @@ export async  function POST(req,res){
 
       let nyaUser = await new User(userData);
       nyaUser.save();
-console.log(nyaUser);
+
 
 
         return NextResponse.json({success:true});
@@ -136,7 +136,7 @@ console.log(nyaUser);
      
 
     if(verifiedData){
-        console.log("***********");
+      
    
         
         

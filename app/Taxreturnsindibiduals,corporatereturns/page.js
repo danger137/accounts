@@ -24,68 +24,74 @@ return <div>
 
 
 
-<div class="background-image2">
-        <div class="bottom-overlay">
-        <div className="container">
-        <div className="row text-center text-md-start">
-            <div className="col mb-3 d-flex align-items-center">
-            <p style={{ fontWeight: "100", whiteSpace: "nowrap" }} className="h1 ms-4">Tax Return Sindibiduals,Corporate Returns</p>
-    
-            </div>
-    
-            <div className="col mb-3 d-flex align-items-center mt-3 gap-3">
-             
-            </div>
-    
-            <div className="col mb-3 d-flex align-items-center mt-3  gap-3">
-             
-            </div>
-    
-            {/* Fourth Item with Increased Top Margin */}
-            <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
-               
-            <div className="col mb-3 d-flex align-items-center gap-3 justify-content-center flex-column flex-md-row mt-4"> {/* Add mt-4 here */}
-            <i className="fa-solid fa-message"></i>
-            <div>
-                <ul className="list-unstyled pt-2 mb-0 text-center">
-                    <li style={{ color: "white" }}>T: 703-953-6184</li>
-                    <li style={{ color: "white" }}>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" className="text-reset text-white">Ahashmi@live.com</a>
-
-
-                    </li>
-                    <li style={{ color: "white" }}>
-                    <div className="d-flex justify-content-center gap-2">
-                        
-                        <i style={{cursor:"pointer"}} onClick={openFacebook} className="fa-brands fa-facebook-f mt-2"></i>
-                    
-                      
-                                            
-                        <a href="https://wa.me/17039536184" target="_blank" rel="noopener noreferrer">
-    <i className="fa-brands fa-whatsapp mt-2 " style={{ color: 'white' }}></i>
-</a>
-
-                  
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
-<i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
-</a>
-
-                                              <i className="fa-solid fa-wifi mt-2"></i>
-               
-                                          </div>
-                  
-                    </li>
-                </ul>
-            </div>
+<div className="background-image2">
+  <div className="bottom-overlay">
+    <div className="container">
+      <div className="row text-center text-md-start">
+        <div className="col mb-3 d-flex align-items-center justify-content-center justify-content-md-start w-100">
+          <p
+            className="h2 text-center text-md-start ms-0 ms-md-4"
+            style={{ fontWeight: 100, whiteSpace: "nowrap" }}
+          >
+            Tax Return Individuals, Corporate Returns
+          </p>
         </div>
-            </div>
+
+        <div className="col mb-3 d-flex align-items-center justify-content-center mt-3 gap-3">
+          {/* Additional content can be added here */}
         </div>
+
+        <div className="col mb-3 d-flex align-items-center justify-content-center mt-3 gap-3">
+          {/* Additional content can be added here */}
+        </div>
+
+        <div className="col mb-3 d-flex align-items-center justify-content-center flex-column flex-md-row gap-3 mt-4 w-100">
+          <i className="fa-solid fa-message"></i>
+          <div>
+            <ul className="list-unstyled pt-2 mb-0 text-center">
+              <li style={{ color: "white" }}>T: 703-953-6184</li>
+              <li style={{ color: "white" }}>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com"
+                  target="_blank"
+                  className="text-reset text-white"
+                  rel="noopener noreferrer"
+                >
+                  Ahashmi@live.com
+                </a>
+              </li>
+              <li style={{ color: "white" }}>
+                <div className="d-flex justify-content-center gap-2">
+                  <i
+                    style={{ cursor: "pointer" }}
+                    onClick={openFacebook}
+                    className="fa-brands fa-facebook-f mt-2"
+                  ></i>
+                  <a
+                    href="https://wa.me/17039536184"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-brands fa-whatsapp mt-2" style={{ color: "white" }}></i>
+                  </a>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-solid fa-envelope mt-2" style={{ color: "white", cursor: "pointer" }}></i>
+                  </a>
+                  <i className="fa-solid fa-wifi mt-2"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    
-        </div>
-        
-    </div>
+  </div>
+</div>
+
     
     <div style={{ padding: "20px", color: "black" }} className="d-flex flex-column flex-md-row gap-3 justify-content-center   ">
     <div className="mt-3 text-center text-md-start me-md-4"> {/* Increased right margin for more gap */}

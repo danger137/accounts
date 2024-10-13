@@ -61,7 +61,7 @@ export async  function GET(req,res){
 
 let user = await  SUb.find();
 
-console.log(user);
+
 
 
 return NextResponse.json({
