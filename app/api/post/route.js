@@ -77,7 +77,7 @@ export async function POST(req) {
 }
 
 // Configure formidable to handle file uploads
-export const config = {
+export let config = {
   api: {
     bodyParser: false,
   },

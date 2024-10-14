@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import "./ads.css";
+import { toast } from 'react-toastify';
 
 
 export default function Admin() {
@@ -32,6 +33,7 @@ export default function Admin() {
       setContent('');
       setPicture(null);
       setDate(''); // Reset the date field
+      toast.success("Done");
     } else {
       console.error('Failed to create post');
     }
