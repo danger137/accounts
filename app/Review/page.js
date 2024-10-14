@@ -52,7 +52,7 @@ let {register} = useForm();
 // })
 
 // }
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyx48A8s4HO4zy6NkiO6HTiwl4qtQjkiVOnP3FCdAyj2Q0c0BGSc50vtyAGGOgoXswm/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxkq7QhqnOAXzov6KBzQEZT0-5f9hKUvO_0lc5vFQlH4JrUU1AX-ohffFObQwW0tjcTSQ/exec';
 const formRef = useRef(null);
 
 const handleSubmit = (e) => {

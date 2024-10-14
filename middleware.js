@@ -1,29 +1,20 @@
-import { NextResponse } from "next/server";
+// middleware.js
+import { NextResponse } from 'next/server';
 
+export function middleware(request) {
+    // Get the current user from cookies
+    const user = request.cookies.get('user');
 
-
-export async function middleware(req){
-
-    try{
-        const result = await isauthenticated(req);
-        if(result){
-            return NextResponse.next();
-        }else{
-            return NextResponse.json({success:false,code:403});
-        }
-    }catch(err){
-        console.log(err);
-        return NextResponse.json({success:false,code:403});
+    // Redirect to login if not authenticated or not admin
+    if (!user || user !== 'admin') {
+        return NextResponse.redirect(new URL('/login', request.url));
     }
-    
 
-
-
+    // Allow the request to proceed if authenticated
+    return NextResponse.next();
 }
 
+// Apply middleware to admin routes
 export const config = {
-    matcher:"/api/Ads"
-}
-
-
-
+    matcher: '/admin',
+};

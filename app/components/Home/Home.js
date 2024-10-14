@@ -46,6 +46,7 @@ return <div>
                     <li style={{ color: "white" }}>
                         <a href="/Internalcontrols" className="text-reset text-white">Internal Controls</a>
                     </li>
+                  
                 </ul>
             </div>
         </div>
@@ -87,8 +88,13 @@ return <div>
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ahashmi@live.com" target="_blank" rel="noopener noreferrer">
 <i class="fa-solid fa-envelope mt-2 " style={{ color: 'white',cursor:"pointer" }} ></i>
 </a>
+<Link href="/login3"  rel="noopener noreferrer">
+<i style={{ color: 'white',cursor:"pointer" }}  class="fa-solid fa-lock mt-2 "></i>
+</Link>
+
 
                                               <i className="fa-solid fa-wifi mt-2"></i>
+                                              
                
                                           </div>
                   

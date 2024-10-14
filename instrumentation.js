@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-import { connectDB } from "./app/lib/db";
+import connectDB from "./app/lib/db";
+
 
 export   function register(){
 

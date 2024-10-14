@@ -24,7 +24,7 @@ export default function Contact(){
 
   
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzSz7wCUwumqYVFQGTLorOHWZCHa6Q-DKhuyrpEyb2vjW3qTbg0JasS272zwvVS0ddRLA/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyGxj3ItaVC3bLBNhTUrbCOF_AxtmSw0TNUN4xgO_xXjU2nkkRCHGj5mTraTtrc-inw0Q/exec';
   const formRef = useRef(null);
 
   const handleSubmit = (e) => {

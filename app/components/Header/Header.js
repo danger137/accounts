@@ -156,6 +156,9 @@ return <div>
         </li>
        
         <li className="nav-item">
+          <Link className="nav-link text-white pt-3" href="/BlogUS">Blogs</Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link text-white pt-3" href="/Contact">Contact</Link>
         </li>
       </ul>
