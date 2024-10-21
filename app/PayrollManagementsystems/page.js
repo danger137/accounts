@@ -155,22 +155,22 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Functions of a Payroll Management System</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Employee Data Management:</strong> PMS maintains comprehensive records of employee information, including personal details, salary structure, and job roles.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Time and Attendance Tracking:</strong> The system tracks employee hours worked, overtime, and leave, integrating this data into payroll calculations.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Salary Calculations:</strong> Automated calculations of gross and net pay, accounting for various deductions such as taxes, benefits, and garnishments.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Tax Management:</strong> PMS ensures compliance with federal, state, and local tax regulations, automatically calculating tax withholdings and generating necessary forms.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Direct Deposit and Payment Processing:</strong> The system facilitates direct deposit of employee salaries into their bank accounts, streamlining payment processes.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Reporting and Analytics:</strong> PMS generates detailed payroll reports, offering insights into labor costs, employee compensation trends, and compliance metrics.
         </li>
       </ul>
@@ -180,35 +180,35 @@ return <div>
         A robust Payroll Management System is crucial for any business due to several reasons:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Accuracy:</strong> Reduces the likelihood of human errors in payroll calculations, ensuring employees are paid accurately and on time.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Compliance:</strong> Helps businesses comply with labor laws and tax regulations, minimizing the risk of penalties and audits.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Time-Saving:</strong> Automates repetitive tasks, allowing HR and finance teams to focus on strategic initiatives rather than manual payroll processing.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Employee Satisfaction:</strong> Ensures timely and accurate payments, contributing to higher employee morale and retention rates.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-3 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Key Features of a Payroll Management System</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>User-Friendly Interface:</strong> An intuitive design that simplifies navigation and enhances user experience for HR personnel.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Integration Capabilities:</strong> Ability to integrate with other HR and accounting systems, facilitating seamless data flow and management.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Customizable Payroll Processes:</strong> Flexibility to tailor payroll processes based on specific business needs, such as pay frequencies and deduction types.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Employee Self-Service Portal:</strong> A platform where employees can access their pay stubs, tax forms, and update personal information, enhancing transparency and engagement.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Mobile Access:</strong> Mobile-friendly features allow HR personnel and employees to manage payroll-related tasks from their smartphones or tablets.
         </li>
       </ul>

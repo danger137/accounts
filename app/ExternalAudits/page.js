@@ -147,23 +147,23 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Key Objectives of External Auditing</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Ensure Financial Statement Accuracy</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Enhance Stakeholder Confidence</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Assess Compliance with Laws and Regulations</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Detect and Prevent Fraud</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Provide Independent Assurance</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Ensure Financial Statement Accuracy</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Enhance Stakeholder Confidence</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Assess Compliance with Laws and Regulations</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Detect and Prevent Fraud</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Provide Independent Assurance</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Components of External Auditing</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Planning the Audit</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Testing of Internal Controls</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Substantive Testing of Transactions</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Reviewing Financial Statements</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Issuing the Audit Report</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Planning the Audit</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Testing of Internal Controls</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Substantive Testing of Transactions</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Reviewing Financial Statements</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Issuing the Audit Report</li>
       </ul>
 
-      <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>1. Planning the Audit</h3>
+      <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px",  fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>1. Planning the Audit</h3>
       <p className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >
         The external audit process begins with careful planning. The auditor reviews the organization’s past financial reports, assesses potential risks, and creates an audit plan to determine the scope and objectives of the audit.
       </p>
@@ -190,10 +190,10 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Types of External Audits</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Financial Audits</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Compliance Audits</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Operational Audits</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Forensic Audits</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Financial Audits</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Compliance Audits</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Operational Audits</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Forensic Audits</li>
       </ul>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Financial Audits</h3>
@@ -218,19 +218,19 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Benefits of External Auditing</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Provides Independent Assurance</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Enhances Credibility with Investors and Stakeholders</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Improves Regulatory Compliance</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Detects Fraud and Irregularities</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Boosts Internal Controls and Efficiency</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Provides Independent Assurance</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Enhances Credibility with Investors and Stakeholders</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Improves Regulatory Compliance</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Detects Fraud and Irregularities</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Boosts Internal Controls and Efficiency</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Challenges of External Auditing</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Cost of Auditing Services</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Time and Resource Intensive</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Resistance from Management</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Ensuring Auditor Independence</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Cost of Auditing Services</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Time and Resource Intensive</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Resistance from Management</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}} >Ensuring Auditor Independence</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Conclusion</h2>

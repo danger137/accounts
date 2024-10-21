@@ -152,60 +152,60 @@ return <div>
 
       <h2 sclassName="h5 text-center text-lg-start mt-3 mb-3" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Components of an Investment Portfolio</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Stocks:</strong> Shares in publicly traded companies, providing potential for capital appreciation and dividends.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Bonds:</strong> Debt securities issued by corporations or governments, offering fixed interest payments and lower risk compared to stocks.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Real Estate:</strong> Physical properties or real estate investment trusts (REITs) that can provide rental income and long-term appreciation.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Commodities:</strong> Physical goods such as gold, silver, oil, and agricultural products that can serve as a hedge against inflation and economic uncertainty.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Cash and Cash Equivalents:</strong> Liquid assets, including savings accounts and money market funds, providing safety and liquidity.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-3 mb-3" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Types of Investment Portfolios</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Growth Portfolio:</strong> Focuses on stocks and assets with high growth potential, aiming for capital appreciation.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Income Portfolio:</strong> Concentrates on generating regular income through dividends and interest from bonds and dividend-paying stocks.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Balanced Portfolio:</strong> Combines growth and income investments to achieve a balance between risk and return.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Conservative Portfolio:</strong> Emphasizes lower-risk assets, such as bonds and cash, to preserve capital and minimize volatility.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Sector-Specific Portfolio:</strong> Targets specific industries or sectors, such as technology, healthcare, or energy, to capitalize on market trends.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-3 mb-3" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Investment Strategies</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Diversification:</strong> Spreading investments across various asset classes and sectors to reduce risk.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Asset Allocation:</strong> Deciding the proportion of different asset types in a portfolio based on risk tolerance and investment goals.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Active Management:</strong> Actively buying and selling assets to outperform market indices through research and analysis.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Passive Management:</strong> Investing in index funds or ETFs that track market indices to achieve average market returns with lower costs.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Value Investing:</strong> Identifying undervalued assets and investing in them with the expectation that their price will rise over time.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Growth Investing:</strong> Focusing on companies with strong earnings growth potential, regardless of current valuation.
         </li>
       </ul>
@@ -215,19 +215,19 @@ return <div>
         An investment portfolio is crucial for several reasons:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Wealth Growth:</strong> A well-structured portfolio can help investors grow their wealth over time through capital appreciation and income generation.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Risk Management:</strong> Diversification across asset classes can help mitigate risks associated with market volatility and economic downturns.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Achieving Financial Goals:</strong> An investment portfolio aligned with an investor’s risk tolerance and objectives can facilitate achieving specific financial goals, such as retirement or purchasing a home.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Inflation Hedge:</strong> Certain investments, like stocks and real estate, can provide returns that outpace inflation, preserving purchasing power.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Tax Efficiency:</strong> Strategic portfolio management can optimize tax liabilities through tax-loss harvesting and selecting tax-efficient investment vehicles.
         </li>
       </ul>

@@ -148,20 +148,20 @@ return <div>
       
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Key Objectives of Internal Controls</h2>
       <ul>
-        <li className="h5 text-center text-lg-start  " style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Accuracy of Financial Reporting</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Compliance with Laws and Regulations</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Operational Efficiency</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Fraud Prevention</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Safeguarding Assets</li>
+        <li className="h5 text-center text-lg-start " style={{lineHeight: "30px", fontWeight: "300", width: "90vw", color:"black",  maxWidth: "53vw"}}>Accuracy of Financial Reporting</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", color:"black", maxWidth: "53vw"}}>Compliance with Laws and Regulations</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", color:"black", maxWidth: "53vw"}}>Operational Efficiency</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", color:"black", maxWidth: "53vw"}}>Fraud Prevention</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", color:"black", maxWidth: "53vw"}}>Safeguarding Assets</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Components of Internal Controls (COSO Framework)</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Control Environment</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Risk Assessment</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Control Activities</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Information and Communication</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Monitoring Activities</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Control Environment</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Risk Assessment</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Control Activities</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Information and Communication</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Monitoring Activities</li>
       </ul>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>1. Control Environment</h3>
@@ -196,26 +196,26 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Types of Internal Controls</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Preventive Controls</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Detective Controls</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Corrective Controls</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Preventive Controls</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Detective Controls</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Corrective Controls</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Benefits of Internal Controls</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Improved Financial Reporting</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Reduced Fraud Risk</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Enhanced Compliance</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Operational Efficiency</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Asset Protection</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Improved Financial Reporting</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Reduced Fraud Risk</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Enhanced Compliance</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Operational Efficiency</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Asset Protection</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Challenges of Implementing Internal Controls</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Cost</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Complexity</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Resistance to Change</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Over-Reliance on Controls</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Cost</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Complexity</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Resistance to Change</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Over-Reliance on Controls</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Conclusion</h2>

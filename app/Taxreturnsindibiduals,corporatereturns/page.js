@@ -161,9 +161,9 @@ return <div>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Filing Requirements</h3>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Filing status (e.g., single, married filing jointly, head of household)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Minimum income thresholds based on age and filing status</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Types of income (e.g., wages, interest, self-employment)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Filing status (e.g., single, married filing jointly, head of household)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Minimum income thresholds based on age and filing status</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Types of income (e.g., wages, interest, self-employment)</li>
       </ul>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Deductions and Credits</h3>
@@ -171,10 +171,10 @@ return <div>
         Individuals may claim various deductions and credits to reduce taxable income and tax liability. Common deductions include:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Standard deduction or itemized deductions</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Retirement contributions (e.g., IRA contributions)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Education credits (e.g., American Opportunity Credit)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Child tax credit and earned income credit</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Standard deduction or itemized deductions</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Retirement contributions (e.g., IRA contributions)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Education credits (e.g., American Opportunity Credit)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Child tax credit and earned income credit</li>
       </ul>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Filing Process</h3>
@@ -182,10 +182,10 @@ return <div>
         Individuals can file tax returns electronically or via paper forms. The process generally involves:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Gathering financial documents (W-2s, 1099s, receipts)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Completing the tax return form</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Submitting the return before the deadline (typically April 15)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Receiving any refund or paying taxes owed</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Gathering financial documents (W-2s, 1099s, receipts)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Completing the tax return form</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Submitting the return before the deadline (typically April 15)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Receiving any refund or paying taxes owed</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Corporate Tax Returns</h2>
@@ -195,9 +195,9 @@ return <div>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Filing Requirements</h3>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Type of corporation (C corporation or S corporation)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Filing deadlines (generally the 15th day of the 4th month after the end of the fiscal year)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Minimum income thresholds and specific forms based on corporate structure</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Type of corporation (C corporation or S corporation)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Filing deadlines (generally the 15th day of the 4th month after the end of the fiscal year)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Minimum income thresholds and specific forms based on corporate structure</li>
       </ul>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Deductions and Credits</h3>
@@ -205,10 +205,10 @@ return <div>
         Corporations can deduct ordinary and necessary business expenses to reduce taxable income. Common deductions include:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Cost of goods sold</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Operating expenses (rent, salaries, utilities)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Depreciation and amortization</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Research and development credits</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Cost of goods sold</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Operating expenses (rent, salaries, utilities)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Depreciation and amortization</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Research and development credits</li>
       </ul>
 
       <h3 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Filing Process</h3>
@@ -216,10 +216,10 @@ return <div>
         The filing process for corporations involves:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Preparing financial statements and tax documents</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Completing the appropriate tax return form (1120 or 1120-S)</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Submitting the return to the IRS and state authorities, if applicable</li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Ensuring compliance with corporate tax regulations and deadlines</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Preparing financial statements and tax documents</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Completing the appropriate tax return form (1120 or 1120-S)</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Submitting the return to the IRS and state authorities, if applicable</li>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>Ensuring compliance with corporate tax regulations and deadlines</li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Conclusion</h2>

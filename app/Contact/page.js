@@ -14,7 +14,7 @@ import { loadStripe } from "@stripe/stripe-js";
 
 export default function Contact(){
 
-   const stripePromise = loadStripe("pk_test_51PycwuP0ebickvSnk2QWol9dU5s4BDsNkiUYF5KjoUnNgjcazHmbLTVz1T97SFNm14rRhFRgyeOL37J3yddbj66X00di2vs6Gq");
+   const stripePromise = loadStripe("pk_test_51QBmYBCF6g9z4JDcgW2PJYh5qTChtUr5qkMtvpdGAN7E96KNxHB8mEH2AfuwRLTvHeClOUd089ZWzuqWxsM2XBMH00kuLjAbpP");
   let move = useRouter();
 
   const openFacebook = () => {

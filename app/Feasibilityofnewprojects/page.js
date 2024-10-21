@@ -150,77 +150,77 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start mt-3" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Types of Feasibility Studies</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}> 
-          <strong>Technical Feasibility:</strong> Assesses whether the technology required for the project is available and can be implemented successfully. This includes evaluating technical resources, expertise, and the ability to meet project specifications.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}> 
+          <strong style={{color:"black"}} >Technical Feasibility:</strong> Assesses whether the technology required for the project is available and can be implemented successfully. This includes evaluating technical resources, expertise, and the ability to meet project specifications.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Economic Feasibility:</strong> Evaluates the financial aspects of the project, including cost-benefit analysis, return on investment (ROI), and overall profitability. This helps determine if the potential financial gains outweigh the costs involved.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Economic Feasibility:</strong> Evaluates the financial aspects of the project, including cost-benefit analysis, return on investment (ROI), and overall profitability. This helps determine if the potential financial gains outweigh the costs involved.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Operational Feasibility:</strong> Examines whether the organization has the capacity and resources to implement the project effectively. This includes assessing workforce capabilities, management structure, and operational processes.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Operational Feasibility:</strong> Examines whether the organization has the capacity and resources to implement the project effectively. This includes assessing workforce capabilities, management structure, and operational processes.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Legal Feasibility:</strong> Analyzes any legal and regulatory requirements associated with the project. This ensures compliance with laws, permits, and any potential legal challenges that may arise.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Legal Feasibility:</strong> Analyzes any legal and regulatory requirements associated with the project. This ensures compliance with laws, permits, and any potential legal challenges that may arise.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Schedule Feasibility:</strong> Assesses whether the project can be completed within a specified timeframe. It evaluates the project timeline, deadlines, and potential constraints that could impact delivery.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Schedule Feasibility:</strong> Assesses whether the project can be completed within a specified timeframe. It evaluates the project timeline, deadlines, and potential constraints that could impact delivery.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-3" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>The Feasibility Assessment Process</h2>
       <ol>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Define the Project:</strong> Clearly outline the project’s objectives, scope, and deliverables. Understanding the project's purpose is crucial for accurate feasibility assessment.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Define the Project:</strong> Clearly outline the project’s objectives, scope, and deliverables. Understanding the project's purpose is crucial for accurate feasibility assessment.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Conduct Market Research:</strong> Gather data on market demand, competition, and customer preferences. This information helps gauge the project's potential success in the marketplace.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Conduct Market Research:</strong> Gather data on market demand, competition, and customer preferences. This information helps gauge the project's potential success in the marketplace.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Evaluate Financial Projections:</strong> Develop detailed financial forecasts, including estimated costs, revenue projections, and funding sources. This analysis should highlight financial viability and potential returns.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Evaluate Financial Projections:</strong> Develop detailed financial forecasts, including estimated costs, revenue projections, and funding sources. This analysis should highlight financial viability and potential returns.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Assess Technical Requirements:</strong> Identify the technical resources and expertise required for successful project execution. This includes evaluating equipment, software, and human resources.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Assess Technical Requirements:</strong> Identify the technical resources and expertise required for successful project execution. This includes evaluating equipment, software, and human resources.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Analyze Operational Capacity:</strong> Review the organization’s current operations to ensure it can support the project. Assess workforce skills, infrastructure, and process compatibility.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Compile Findings:</strong> Summarize the analysis and present the feasibility report, highlighting strengths, weaknesses, risks, and recommendations for proceeding or revising the project.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Compile Findings:</strong> Summarize the analysis and present the feasibility report, highlighting strengths, weaknesses, risks, and recommendations for proceeding or revising the project.
         </li>
       </ol>
 
-      <h2 className="h4 text-center text-lg-start mt-3 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Importance of Feasibility Studies</h2>
       <p className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
         Conducting a feasibility study is essential for several reasons:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Risk Mitigation:</strong> Identifying potential challenges and risks early in the project lifecycle helps organizations make informed decisions and avoid costly mistakes.
+      <h2 className="h4 text-center text-lg-start mt-3 " style={{lineHeight: "30px",color:"black", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Importance of Feasibility Studies</h2>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Risk Mitigation:</strong> Identifying potential challenges and risks early in the project lifecycle helps organizations make informed decisions and avoid costly mistakes.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Resource Optimization:</strong> Ensures that resources, including time and finances, are allocated efficiently by confirming project viability before significant investments.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Resource Optimization:</strong> Ensures that resources, including time and finances, are allocated efficiently by confirming project viability before significant investments.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Informed Decision-Making:</strong> Provides stakeholders with a clear understanding of project feasibility, enabling them to make informed decisions about project approval or adjustments.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Informed Decision-Making:</strong> Provides stakeholders with a clear understanding of project feasibility, enabling them to make informed decisions about project approval or adjustments.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Improved Planning:</strong> A thorough feasibility study enhances project planning by identifying necessary steps, resources, and potential roadblocks.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Improved Planning:</strong> A thorough feasibility study enhances project planning by identifying necessary steps, resources, and potential roadblocks.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-3 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Benefits of Conducting Feasibility Studies</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Enhanced Success Rates:</strong> Projects that undergo feasibility analysis have a higher likelihood of success, as potential issues are addressed before execution.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Enhanced Success Rates:</strong> Projects that undergo feasibility analysis have a higher likelihood of success, as potential issues are addressed before execution.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Stakeholder Confidence:</strong> A comprehensive feasibility study builds confidence among stakeholders, investors, and team members regarding project viability and potential returns.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Stakeholder Confidence:</strong> A comprehensive feasibility study builds confidence among stakeholders, investors, and team members regarding project viability and potential returns.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Clearer Objectives:</strong> Defining the project scope and objectives during the feasibility study helps align team efforts and expectations, leading to better project outcomes.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Clearer Objectives:</strong> Defining the project scope and objectives during the feasibility study helps align team efforts and expectations, leading to better project outcomes.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Strategic Alignment:</strong> Ensures that the project aligns with the organization’s overall strategic goals, maximizing the potential for organizational growth and success.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Strategic Alignment:</strong> Ensures that the project aligns with the organization’s overall strategic goals, maximizing the potential for organizational growth and success.
         </li>
       </ul>
 

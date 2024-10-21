@@ -2,10 +2,14 @@
 import Link from "next/link";
 import "./About.css";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
 
 export default function About(){
+
+
+
 
   let move = useRouter();
 

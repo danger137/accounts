@@ -18,21 +18,21 @@ export default function SubscriptionForm() {
 
   // Define product price IDs
   const productPriceIds = {
-    product1: 'price_1Q9CDEP0ebickvSnQHUu2u9u',
-    product2: 'price_1Q9CG2P0ebickvSnDxL0UM3w',
-    product3: 'price_1Q9CJ2P0ebickvSnocEo6Mke',
-    product4: 'price_1Q9CK7P0ebickvSn8n3C8h8x',
-    product5: 'price_1Q9CKyP0ebickvSn5Aip2vFj',
-    product6: 'price_1Q9CMrP0ebickvSnWMwCpNBK',
-    product7: 'price_1Q9COnP0ebickvSnknrRIzKp',
-    product8: 'price_1Q9CQKP0ebickvSnnwzoOOM2',
-    product9: 'price_1Q9CRMP0ebickvSnTSbpdW2B',
-    product10: 'price_1Q9CS2P0ebickvSnYF1qFWcR',
-    product11: 'price_1Q9CSqP0ebickvSnx6oBhH2y',
-    product12: 'price_1Q9CTpP0ebickvSndel0Pxrw',
-    product13: 'price_1Q9CUwP0ebickvSn4JJWUOwy',
-    product14: 'price_1Q9CVcP0ebickvSn7jw61lUE',
-    product15: 'price_1Q9CW7P0ebickvSno26WMn0R',
+    product1: 'price_1QBoCECF6g9z4JDcqjy2QKXq',
+    product2: 'price_1QBoHGCF6g9z4JDcBEUqDfl1',
+    product3: 'price_1QBoHrCF6g9z4JDcThlMzKAA',
+    product4: 'price_1QBoRMCF6g9z4JDcryYZZzwx',
+    product5: 'price_1QBoRnCF6g9z4JDcddx94z3H',
+    product6: 'price_1QBoWNCF6g9z4JDcCeRjxkK5',
+    product7: 'price_1QBoWvCF6g9z4JDchNiFzQfS',
+    product8: 'price_1QBoXTCF6g9z4JDczpaqGG7i',
+    product9: 'price_1QBoXxCF6g9z4JDchhi0ZMtf',
+    product10: 'price_1QBoYOCF6g9z4JDc34jbgmsY',
+    product11: 'price_1QBogQCF6g9z4JDcm3m62gSj',
+    product12: 'price_1QBoh0CF6g9z4JDctlzNUMYD',
+    product13: 'price_1QBohbCF6g9z4JDcLvYJG4vt',
+    product14: 'price_1QBoi4CF6g9z4JDccXwDhyMH',
+    product15: 'price_1QBoiWCF6g9z4JDc96aMI373',
   };
 
 
@@ -89,13 +89,6 @@ export default function SubscriptionForm() {
       setShowAlert(true);
     } finally {
       setLoading(false);
-      axios.post("/api/subscription",{
-        email,
-        fullName,
-        CompanyName,
-        paymentMethodId: paymentMethod.id,
-        priceId: productPriceIds[selectedProduct],
-      });
       
     }
 

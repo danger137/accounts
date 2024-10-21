@@ -149,92 +149,92 @@ return <div>
 
       <h2 className="h4 text-center text-lg-start mt-4 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Definitions</h2>
       <ul>
-        <li className="h5 text-center text-lg-start " style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Acquisition:</strong> An acquisition occurs when one company purchases another company, gaining control over its operations and assets. This can involve acquiring a majority or all of the target company's shares.
+        <li className="h5 text-center text-lg-start " style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Acquisition:</strong> An acquisition occurs when one company purchases another company, gaining control over its operations and assets. This can involve acquiring a majority or all of the target company's shares.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Mergers:</strong> A merger is the combination of two companies to form a new entity, typically with mutual agreement from both parties. Mergers often involve a sharing of resources, management, and operations.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Mergers:</strong> A merger is the combination of two companies to form a new entity, typically with mutual agreement from both parties. Mergers often involve a sharing of resources, management, and operations.
         </li>
       </ul>
 
-      <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Types of Acquisitions and Mergers</h2>
+      <h2 className="h4 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Types of Acquisitions and Mergers</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Horizontal Merger:</strong> This occurs between companies in the same industry at the same stage of production, aiming to increase market share and reduce competition.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Horizontal Merger:</strong> This occurs between companies in the same industry at the same stage of production, aiming to increase market share and reduce competition.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Vertical Merger:</strong> This involves companies at different stages of production in the same industry, allowing for better control over the supply chain.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Vertical Merger:</strong> This involves companies at different stages of production in the same industry, allowing for better control over the supply chain.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Conglomerate Merger:</strong> This occurs between companies in unrelated industries, aiming to diversify the business and reduce risk.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong  style={{color:"black"}} >Conglomerate Merger:</strong> This occurs between companies in unrelated industries, aiming to diversify the business and reduce risk.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Hostile Takeover:</strong> This is when an acquisition occurs without the consent of the target company's management, often involving aggressive tactics to gain control.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Hostile Takeover:</strong> This is when an acquisition occurs without the consent of the target company's management, often involving aggressive tactics to gain control.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Friendly Acquisition:</strong> This occurs when both companies agree on the acquisition terms, resulting in a smoother transition and integration.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Friendly Acquisition:</strong> This occurs when both companies agree on the acquisition terms, resulting in a smoother transition and integration.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-4 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>The Process of Acquisitions and Mergers</h2>
       <ol>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
-          <strong>Strategic Planning:</strong> Companies identify strategic goals and assess potential targets for acquisition or merger based on synergies, market position, and financial health.
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+          <strong style={{color:"black"}} >Strategic Planning:</strong> Companies identify strategic goals and assess potential targets for acquisition or merger based on synergies, market position, and financial health.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Due Diligence:</strong> A thorough investigation is conducted to evaluate the financial, operational, and legal aspects of the target company, ensuring that all risks are understood.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Valuation:</strong> The target company is assessed to determine its fair market value, considering factors like assets, liabilities, revenue, and market conditions.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Negotiation:</strong> Terms of the acquisition or merger are negotiated, including price, payment methods, and the structure of the new entity.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Regulatory Approval:</strong> Depending on the jurisdiction, regulatory bodies may need to approve the transaction to ensure it complies with antitrust and competition laws.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Integration:</strong> After the deal is finalized, the integration process begins, aligning operations, cultures, and systems to achieve the intended synergies.
         </li>
       </ol>
 
-      <h2 className="h4 text-center text-lg-start mt-4 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Importance of Acquisitions and Mergers</h2>
+      <h2 className="h4 text-center text-lg-start mt-4 " style={{lineHeight: "30px",color:"black", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Importance of Acquisitions and Mergers</h2>
       <p className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
         Acquisitions and mergers are essential for various reasons, including:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Market Expansion:</strong> These strategies enable companies to enter new markets quickly and efficiently, gaining access to new customers and revenue streams.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Cost Synergies:</strong> Combining operations often leads to cost savings through economies of scale, reduced overhead, and improved efficiency.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Increased Market Share:</strong> Mergers and acquisitions can significantly increase a company’s market share, enhancing its competitive position.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Diversification:</strong> Companies can reduce risk by diversifying their product lines and services through acquisitions or mergers.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Access to Technology and Expertise:</strong> Acquiring innovative companies provides access to new technologies, patents, and expertise that can drive growth and development.
         </li>
       </ul>
 
       <h2 className="h4 text-center text-lg-start mt-4 " style={{lineHeight: "30px", fontWeight: "500", width: "90vw", maxWidth: "53vw"}}>Benefits of Acquisitions and Mergers</h2>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Increased Profitability:</strong> Successful mergers and acquisitions can lead to higher revenues and profitability through improved operations and market positioning.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Enhanced Competitive Advantage:</strong> By combining strengths, companies can better compete against rivals and create a more robust market presence.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Improved Resource Allocation:</strong> Mergers allow for better allocation of resources, maximizing efficiency and effectiveness in operations.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Stronger Brand Recognition:</strong> Combining reputable brands can enhance market visibility and attract more customers.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Financial Stability:</strong> Mergers can create stronger financial entities, improving stability and access to funding for future growth.
         </li>
       </ul>
@@ -244,19 +244,19 @@ return <div>
         Despite their potential benefits, acquisitions and mergers can pose several challenges:
       </p>
       <ul>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Cultural Differences:</strong> Merging two distinct corporate cultures can lead to employee dissatisfaction and turnover if not managed effectively.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Integration Issues:</strong> Successfully integrating operations, systems, and processes can be complex and time-consuming, often requiring significant resources.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Regulatory Scrutiny:</strong> Antitrust laws may impede or delay mergers and acquisitions, as regulatory bodies assess their impact on market competition.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Financial Risks:</strong> Overvaluation or unexpected liabilities of the acquired company can result in financial losses, jeopardizing the acquiring company’s stability.
         </li>
-        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
+        <li className="h5 text-center text-lg-start" style={{lineHeight: "30px",color:"black", fontWeight: "300", width: "90vw", maxWidth: "53vw"}}>
           <strong>Loss of Key Talent:</strong> During the transition, critical employees may leave, leading to a loss of expertise and disruption of operations.
         </li>
       </ul>

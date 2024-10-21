@@ -2,9 +2,17 @@
 import Link from "next/link"
 import "./Home.css"
 import { useRouter } from "next/navigation"
+import { useEffect } from "react";
 
 
 export default function Home(){
+
+
+    useEffect(()=>{
+
+        document.title = "Home";
+     
+     },[])
 
 
 let move = useRouter();
