@@ -16,7 +16,7 @@
     "axios": "^1.7.7",
     "cookies": "^0.9.1",
     "dotenv": "^16.4.5",
-    "formidable": "^3.5.1",
+    "formidable": "^3.5.2",
     "fs": "^0.0.1-security",
     "jose": "^5.9.3",
     "js-cookie": "^3.0.5",
