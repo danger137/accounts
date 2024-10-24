@@ -4,13 +4,6 @@ import path from 'path';
 // Define the path for posts.json
 const postsFilePath = path.join(process.cwd(), 'data', 'posts.json');
 
-// Function to ensure the directory exists
-const ensureDirectoryExists = (dir) => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-};
-
 // Function to read posts from the JSON file
 const readPostsFromFile = () => {
   if (!fs.existsSync(postsFilePath)) {
@@ -25,9 +18,6 @@ const writePostsToFile = (posts) => {
   fs.writeFileSync(postsFilePath, JSON.stringify(posts, null, 2), 'utf-8');
 };
 
-// Ensure the data directory exists
-ensureDirectoryExists(path.join(process.cwd(), 'data'));
-
 // Handle GET requests
 export async function GET() {
   const posts = readPostsFromFile(); // Initialize posts from file
@@ -39,7 +29,6 @@ export async function GET() {
 
 // Handle POST requests
 export async function POST(req) {
-  // Check if the request has a valid content type
   if (!req.body) {
     return new Response('No data provided', { status: 400 });
   }
@@ -56,10 +45,9 @@ export async function POST(req) {
     return new Response('Missing fields', { status: 400 });
   }
 
-  // Create a unique filename and save the uploaded file
-  const picturePath = path.join(process.cwd(), 'public', 'uploads', file.name);
+  // Convert the uploaded file to a Base64-encoded string
   const buffer = Buffer.from(await file.arrayBuffer());
-  fs.writeFileSync(picturePath, buffer);
+  const base64Image = `data:${file.type};base64,${buffer.toString('base64')}`;
 
   // Get the current date
   const date = new Date().toISOString();
@@ -68,7 +56,7 @@ export async function POST(req) {
     id: posts.length + 1,
     title,
     content,
-    picture: `/uploads/${file.name}`,
+    picture: base64Image, // Use the Base64-encoded image
     date,
   };
 
