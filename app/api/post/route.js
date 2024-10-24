@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid'; // UUID library for generating unique IDs
+import { v4 as uuidv4 } from 'uuid'; // Import UUID library for generating unique IDs
 
 let posts = []; // In-memory array to store posts
 
