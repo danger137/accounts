@@ -83,9 +83,5 @@ export async function POST(req) {
   });
 }
 
-// Configure formidable to handle file uploads
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+// Set runtime to Node.js to allow use of 'fs' and 'path'
+export const runtime = 'nodejs';
