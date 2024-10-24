@@ -1,35 +1,16 @@
 import { v4 as uuidv4 } from 'uuid'; // Import UUID library for generating unique IDs
-import { promises as fs } from 'fs'; // Import fs module for file operations
-import path from 'path';
 
-const dataFilePath = path.join(process.cwd(), 'posts.json'); // Define the path for the JSON file
+let posts = []; // In-memory array to store posts
 
-// Function to load posts from the JSON file
-async function loadPosts() {
-  try {
-    const data = await fs.readFile(dataFilePath, 'utf8');
-    return JSON.parse(data); // Parse and return the posts
-  } catch (error) {
-    // If the file doesn't exist or is unreadable, return an empty array
-    return [];
-  }
-}
-
-// Function to save posts to the JSON file
-async function savePosts(posts) {
-  await fs.writeFile(dataFilePath, JSON.stringify(posts, null, 2)); // Write posts to JSON file
-}
-
-// Handle GET requests
+// Handle GET requests to retrieve posts
 export async function GET() {
-  const posts = await loadPosts(); // Load posts from the file
   return new Response(JSON.stringify(posts), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
 }
 
-// Handle POST requests
+// Handle POST requests to create a new post
 export async function POST(req) {
   const data = await req.formData();
   const file = data.get('picture');
@@ -54,14 +35,29 @@ export async function POST(req) {
     date: new Date().toISOString(),
   };
 
-  // Load existing posts, add the new post, and save them back to the file
-  const posts = await loadPosts();
+  // Add the new post to the in-memory array
   posts.push(newPost);
-  await savePosts(posts);
 
   // Respond with the newly created post
   return new Response(JSON.stringify(newPost), {
     status: 201,
     headers: { 'Content-Type': 'application/json' },
   });
+}
+
+// Handle DELETE requests to delete a post by ID
+export async function DELETE(req) {
+  const { id } = await req.json();
+
+  // Find the index of the post to delete
+  const index = posts.findIndex((post) => post.id === id);
+
+  if (index === -1) {
+    return new Response('Post not found', { status: 404 });
+  }
+
+  // Remove the post from the array
+  posts.splice(index, 1);
+
+  return new Response('Post deleted', { status: 204 });
 }
