@@ -1,18 +1,16 @@
 "use client";
 import Link from "next/link";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "@/store/auth";
+
+
 import "./Footer.css";
 
 
 export default function Footer() {
-  const dispatch = useDispatch();
+
 
   
   
-  // Get the current user from Redux store
-  const someName = useSelector((store) => store.authSlice.currentUser);
+
 
   // Simulate fetching user info from localStorage or an API
   
