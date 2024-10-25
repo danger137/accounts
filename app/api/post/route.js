@@ -10,7 +10,6 @@ const filePath = path.join(process.cwd(), "public/uploads/post.json");
 export async function GET(req) {
   // Handle the GET request
   try {
-    // Read the JSON file
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const users = JSON.parse(fileContent);
 
