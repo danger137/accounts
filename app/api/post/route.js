@@ -1,21 +1,22 @@
 import { v4 as uuidv4 } from 'uuid';
 
-<<<<<<< HEAD
 // In-memory array to store posts
 let posts = [];
-=======
-const gistId = "1fe378fdf0fe84766a410699ac5988c9"; // Use the actual Gist ID (not the full URL)
-<<<<<<< HEAD
-const githubToken = process.env.GITHUB_TOKEN; // Use the GitHub token from the environment variable
-=======
- const githubToken = process.env.GITHUB_TOKEN; // Ensure this variable is set in your environment
-; // Replace with your GitHub token (ensure it’s kept secure)
->>>>>>> 19a58c3 (NAME)
->>>>>>> b917d85 (NAME)
+
+// Helper function to read posts from the array
+function readPosts() {
+  return posts;
+}
+
+// Helper function to write posts to the array
+function writePosts(updatedPosts) {
+  posts = updatedPosts;
+}
 
 // Handle GET requests to retrieve posts
 export async function GET() {
-  return new Response(JSON.stringify(posts), {
+  const allPosts = readPosts();
+  return new Response(JSON.stringify(allPosts), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
