@@ -1,72 +1,72 @@
-import { AD } from "@/app/model/ad";
-import { createReadStream } from "fs";
 import { NextResponse } from "next/server";
-import { pipeline } from "stream";
-import {promisify} from "util";
-import fs from  "fs";
+import { promisify } from "util";
+import fs from "fs";
 import path from "path";
+import { pipeline } from "stream";
 
+let pump = promisify(pipeline);
+const filePath = path.join(process.cwd(), "public/uploads/post.json");
 
+export async function GET(req) {
+  // Handle the GET request
+  try {
+    // Read the JSON file
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const users = JSON.parse(fileContent);
 
-
-
-
-
-
-let pump = await promisify(pipeline);
-
-export async function GET(req,res){
-
-
-
-
-
-   let users;
-
- 
-      users = await AD.find();
-   
-    
-
-    
     return NextResponse.json({
-      success:true,
-      user:users
-    })
-    
+      success: true,
+      users: users,
+    });
+  } catch (error) {
+    console.error("Failed to read JSON file:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to read data" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(req) {
+  // Handle the POST request
+  try {
+    let data = await req.formData();
+    let file = data.get("picture");
+
+    // Create file path for the uploaded image
+    let filePathImage = path.join(process.cwd(), "public/uploads/", file.name);
+
+    // Save the uploaded file
+    await pump(file.stream(), fs.createWriteStream(filePathImage));
+
+    // Create new ad data
+    let newAd = {
+      title: data.get("title"),
+      content: data.get("content"),
+      date: data.get("date"),
+      price: data.get("price"),
+      owner: data.get("owner"),
+      picture: "/uploads/" + file.name,
+    };
+
+    // Read existing data from JSON file
+    let existingData = [];
+    try {
+      const fileContent = fs.readFileSync(filePath, "utf-8");
+      existingData = JSON.parse(fileContent);
+    } catch (error) {
+      console.warn("JSON file does not exist or is empty. Starting with an empty array.");
     }
 
-export async function POST(req,res){
+    // Add new ad to the existing data
+    existingData.push(newAd);
 
-// let data = await req.json();
-// console.log(data);
+    // Write the updated data back to the JSON file
+    fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2), "utf-8");
 
-let data = await req.formData();
-
-let file = data.get("picture");
-
-let path = process.cwd()+"/public/ads/"+file.name;
-
-pump(file.stream(),fs.createWriteStream(path));
-
-let userAds = {
-   title:data.get("title"),
-   content:data.get("content"),
-   date:data.get("date"),
-   price:data.get("price"),
-   owner:data.get("owner"),
-   picture:"/ads/"+file.name
-}
-console.log(userAds);
-
-
-let nyaAds = new AD(userAds);
-
-
-await nyaAds.save();
-
-
-
-return NextResponse.json({success:true})
-
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Failed to handle POST request:", error);
+    return NextResponse.json({ success: false, error: "Failed to create ad" }, { status: 500 });
+  }
 }
