@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 import { pipeline } from "stream";
 
-let pump = promisify(pipeline);
+const pump = promisify(pipeline);
 const filePath = path.join(process.cwd(), "public/uploads/post.json");
 
 export async function GET(req) {
