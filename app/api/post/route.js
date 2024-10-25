@@ -1,32 +1,26 @@
 import { v4 as uuidv4 } from 'uuid';
-import fs from 'fs/promises';
-import path from 'path';
+import { MongoClient } from 'mongodb';
 
-const DATA_FILE = path.resolve('posts.json');
+// MongoDB connection URI and database configuration
+const uri = "mongodb://localhost:27017";
+const client = new MongoClient(uri);
+const dbName = 'myDatabase';
+const collectionName = 'posts';
 
-// Helper function to read posts from the file
-async function readPosts() {
-  try {
-    const data = await fs.readFile(DATA_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    // If the file doesn't exist or can't be read, return an empty array
-    return [];
+// Helper function to connect to the MongoDB collection
+async function getCollection() {
+  if (!client.topology || !client.topology.isConnected()) {
+    await client.connect();
   }
-}
-
-// Helper function to write posts to the file
-async function writePosts(posts) {
-  try {
-    await fs.writeFile(DATA_FILE, JSON.stringify(posts, null, 2), 'utf-8');
-  } catch (error) {
-    console.error('Error writing to file:', error);
-  }
+  const db = client.db(dbName);
+  return db.collection(collectionName);
 }
 
 // Handle GET requests to retrieve posts
 export async function GET() {
-  const posts = await readPosts();
+  const collection = await getCollection();
+  const posts = await collection.find({}).toArray();
+  
   return new Response(JSON.stringify(posts), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
@@ -58,10 +52,9 @@ export async function POST(req) {
     date: new Date().toISOString(),
   };
 
-  // Read existing posts, add the new post, and write the updated list
-  const posts = await readPosts();
-  posts.push(newPost);
-  await writePosts(posts);
+  // Store the new post in the MongoDB collection
+  const collection = await getCollection();
+  await collection.insertOne(newPost);
 
   // Respond with the newly created post
   return new Response(JSON.stringify(newPost), {
@@ -74,18 +67,13 @@ export async function POST(req) {
 export async function DELETE(req) {
   const { id } = await req.json();
 
-  // Read existing posts
-  const posts = await readPosts();
+  // Delete the post from the MongoDB collection
+  const collection = await getCollection();
+  const result = await collection.deleteOne({ id });
 
-  // Find the index of the post to delete
-  const index = posts.findIndex((post) => post.id === id);
-  if (index === -1) {
+  if (result.deletedCount === 0) {
     return new Response('Post not found', { status: 404 });
   }
-
-  // Remove the post from the array and write the updated list to the file
-  posts.splice(index, 1);
-  await writePosts(posts);
 
   return new Response('Post deleted', { status: 204 });
 }
