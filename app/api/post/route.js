@@ -1,44 +1,46 @@
-import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs/promises';
 import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
 
-const filePath = path.join(process.cwd(), 'posts.json');
+// Use `/tmp/posts.json` as the writable file path
+const filePath = '/tmp/posts.json';
 
+// In-memory cache to hold posts
+let posts = [];
+
+// Load posts from the file if available
 async function loadPosts() {
-  let posts = [];
   try {
     const data = await fs.readFile(filePath, 'utf8');
     if (data.trim()) {
-      try {
-        posts = JSON.parse(data);
-      } catch (jsonError) {
-        console.error('Error parsing JSON data:', jsonError);
-        posts = []; // Reset to an empty array if JSON is invalid
-      }
+      posts = JSON.parse(data);
+    } else {
+      posts = [];
     }
   } catch (error) {
     if (error.code === 'ENOENT') {
-      console.warn('posts.json not found, initializing empty list.');
+      // If the file doesn't exist, initialize an empty array
       posts = [];
     } else {
       console.error('Error loading posts:', error);
-      throw error;
     }
   }
-  return posts;
 }
 
-async function writePosts(posts) {
+// Save posts to the file
+async function savePosts() {
   try {
     await fs.writeFile(filePath, JSON.stringify(posts, null, 2), 'utf8');
-  } catch (writeError) {
-    console.error('Error writing posts:', writeError);
-    throw writeError;
+  } catch (error) {
+    console.error('Error saving posts:', error);
   }
 }
 
+// Initialize posts when the server starts
+await loadPosts();
+
+// Define API routes
 export async function GET() {
-  const posts = await loadPosts();
   return new Response(JSON.stringify(posts), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
@@ -67,9 +69,8 @@ export async function POST(req) {
     date: new Date().toISOString(),
   };
 
-  const posts = await loadPosts();
   posts.push(newPost);
-  await writePosts(posts);
+  await savePosts();
 
   return new Response(JSON.stringify(newPost), {
     status: 201,
@@ -79,15 +80,13 @@ export async function POST(req) {
 
 export async function DELETE(req) {
   const { id } = await req.json();
-  const posts = await loadPosts();
-
   const index = posts.findIndex((post) => post.id === id);
   if (index === -1) {
     return new Response('Post not found', { status: 404 });
   }
 
   posts.splice(index, 1);
-  await writePosts(posts);
+  await savePosts();
 
   return new Response('Post deleted', { status: 204 });
 }
