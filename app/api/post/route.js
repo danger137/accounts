@@ -34,41 +34,47 @@ export async function GET() {
 
 // Handle POST requests to create a new post
 export async function POST(req) {
-  const data = await req.formData(); // Get form data from the request
-  const file = data.get('picture'); // Retrieve the uploaded picture
-  const title = data.get('title'); // Retrieve the title
-  const content = data.get('content'); // Retrieve the content
+  console.log("Received POST request"); // Log the request start
+  const data = await req.formData();
+  console.log("Form Data: ", Object.fromEntries(data)); // Log the incoming form data
+
+  const file = data.get('picture');
+  const title = data.get('title');
+  const content = data.get('content');
 
   // Check for missing fields
   if (!file || !title || !content) {
+    console.error('Missing fields: ', { file, title, content }); // Log the missing fields
     return new Response('Missing fields', { status: 400 });
   }
 
   // Convert the uploaded file to a Base64 string
-  const buffer = Buffer.from(await file.arrayBuffer());
-  const base64Image = buffer.toString('base64');
-  const base64DataUrl = `data:${file.type};base64,${base64Image}`; // Create a data URL
+  try {
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const base64Image = buffer.toString('base64');
+    const base64DataUrl = `data:${file.type};base64,${base64Image}`;
 
-  // Create a new post object
-  const newPost = {
-    id: uuidv4(),
-    title,
-    content,
-    picture: base64DataUrl,
-    date: new Date().toISOString(), // Store the current date
-  };
+    // Create a new post object
+    const newPost = {
+      id: uuidv4(),
+      title,
+      content,
+      picture: base64DataUrl,
+      date: new Date().toISOString(),
+    };
 
-  // Read existing posts, add the new one, and write back to the file
-  const posts = await readPostsFromFile();
-  posts.push(newPost); // Add new post to the array
-  await writePostsToFile(posts); // Write updated posts back to the file
+    // Here, you'd typically store the new post in a database
 
-  // Respond with the newly created post
-  return new Response(JSON.stringify(newPost), {
-    status: 201,
-    headers: { 'Content-Type': 'application/json' },
-  });
+    return new Response(JSON.stringify(newPost), {
+      status: 201,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    console.error('Error processing file: ', error); // Log errors related to file processing
+    return new Response('Error processing file', { status: 500 });
+  }
 }
+
 
 // Handle DELETE requests to delete a post by ID
 export async function DELETE(req) {
