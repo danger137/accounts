@@ -1,34 +1,45 @@
 import { v4 as uuidv4 } from 'uuid';
+import fs from 'fs/promises'; // File system library for reading/writing files
+import path from 'path'; // Utility for handling file paths
 
-// In-memory array to store posts
-let posts = [];
+const filePath = path.join(process.cwd(), 'posts.json'); // Path to the JSON file
 
-// Helper function to read posts from the array
-function readPosts() {
-  return posts;
+// Helper function to read posts from the JSON file
+async function readPostsFromFile() {
+  try {
+    const data = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(data); // Parse and return the JSON data
+  } catch (error) {
+    // If file doesn't exist or can't be read, return an empty array
+    if (error.code === 'ENOENT') {
+      return [];
+    }
+    throw error; // Throw other errors to be handled elsewhere
+  }
 }
 
-// Helper function to write posts to the array
-function writePosts(updatedPosts) {
-  posts = updatedPosts;
+// Helper function to write posts to the JSON file
+async function writePostsToFile(posts) {
+  await fs.writeFile(filePath, JSON.stringify(posts, null, 2), 'utf8'); // Write posts as pretty-printed JSON
 }
 
 // Handle GET requests to retrieve posts
 export async function GET() {
-  const allPosts = readPosts();
-  return new Response(JSON.stringify(allPosts), {
+  const posts = await readPostsFromFile(); // Read posts from the file
+  return new Response(JSON.stringify(posts), {
     status: 200,
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' }, // Set the response type to JSON
   });
 }
 
 // Handle POST requests to create a new post
 export async function POST(req) {
-  const data = await req.formData();
-  const file = data.get('picture');
-  const title = data.get('title');
-  const content = data.get('content');
+  const data = await req.formData(); // Get form data from the request
+  const file = data.get('picture'); // Retrieve the uploaded picture
+  const title = data.get('title'); // Retrieve the title
+  const content = data.get('content'); // Retrieve the content
 
+  // Check for missing fields
   if (!file || !title || !content) {
     return new Response('Missing fields', { status: 400 });
   }
@@ -36,7 +47,7 @@ export async function POST(req) {
   // Convert the uploaded file to a Base64 string
   const buffer = Buffer.from(await file.arrayBuffer());
   const base64Image = buffer.toString('base64');
-  const base64DataUrl = `data:${file.type};base64,${base64Image}`;
+  const base64DataUrl = `data:${file.type};base64,${base64Image}`; // Create a data URL
 
   // Create a new post object
   const newPost = {
@@ -44,11 +55,13 @@ export async function POST(req) {
     title,
     content,
     picture: base64DataUrl,
-    date: new Date().toISOString(),
+    date: new Date().toISOString(), // Store the current date
   };
 
-  // Add the new post to the in-memory array
-  posts.push(newPost);
+  // Read existing posts, add the new one, and write back to the file
+  const posts = await readPostsFromFile();
+  posts.push(newPost); // Add new post to the array
+  await writePostsToFile(posts); // Write updated posts back to the file
 
   // Respond with the newly created post
   return new Response(JSON.stringify(newPost), {
@@ -59,7 +72,10 @@ export async function POST(req) {
 
 // Handle DELETE requests to delete a post by ID
 export async function DELETE(req) {
-  const { id } = await req.json();
+  const { id } = await req.json(); // Get the post ID from the request body
+
+  // Read the existing posts
+  const posts = await readPostsFromFile();
 
   // Find the index of the post to delete
   const index = posts.findIndex((post) => post.id === id);
@@ -67,8 +83,9 @@ export async function DELETE(req) {
     return new Response('Post not found', { status: 404 });
   }
 
-  // Remove the post from the array
+  // Remove the post from the array and write the updated list back to the file
   posts.splice(index, 1);
+  await writePostsToFile(posts);
 
   return new Response('Post deleted', { status: 204 });
 }
