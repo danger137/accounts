@@ -1,52 +1,66 @@
-import fs from 'fs/promises';
-import path from 'path';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'; // Import the uuidv4 function
 
-// Use `/tmp/posts.json` as the writable file path
-const filePath = '/tmp/posts.json';
+const gistId = "1fe378fdf0fe84766a410699ac5988c9"; // Use the actual Gist ID (not the full URL)
+const githubToken = process.env.GITHUB_TOKEN; // Use the GitHub token from the environment variable
 
-// In-memory cache to hold posts
-let posts = [];
-
-// Load posts from the file if available
-async function loadPosts() {
-  try {
-    const data = await fs.readFile(filePath, 'utf8');
-    if (data.trim()) {
-      posts = JSON.parse(data);
-    } else {
-      posts = [];
-    }
-  } catch (error) {
-    if (error.code === 'ENOENT') {
-      // If the file doesn't exist, initialize an empty array
-      posts = [];
-    } else {
-      console.error('Error loading posts:', error);
-    }
-  }
-}
-
-// Save posts to the file
-async function savePosts() {
-  try {
-    await fs.writeFile(filePath, JSON.stringify(posts, null, 2), 'utf8');
-  } catch (error) {
-    console.error('Error saving posts:', error);
-  }
-}
-
-// Initialize posts when the server starts
-await loadPosts();
-
-// Define API routes
-export async function GET() {
-  return new Response(JSON.stringify(posts), {
-    status: 200,
-    headers: { 'Content-Type': 'application/json' },
+async function getPosts() {
+  const response = await fetch(`https://api.github.com/gists/${gistId}`, {
+    headers: {
+      Authorization: `Bearer ${githubToken}`,
+    },
   });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch posts from Gist');
+  }
+
+  const gist = await response.json();
+  
+  // Ensure 'posts.json' exists in the gist files
+  if (!gist.files['posts.json']) {
+    return []; // Return an empty array if no posts file exists
+  }
+
+  const posts = JSON.parse(gist.files['posts.json'].content);
+  return posts;
 }
 
+async function savePosts(posts) {
+  const updatedContent = JSON.stringify(posts, null, 2); // Pretty print JSON
+  const response = await fetch(`https://api.github.com/gists/${gistId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${githubToken}`,
+    },
+    body: JSON.stringify({
+      files: {
+        'posts.json': {
+          content: updatedContent,
+        },
+      },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to save posts to Gist');
+  }
+}
+
+// Handle GET requests
+export async function GET() {
+  try {
+    const posts = await getPosts();
+    return new Response(JSON.stringify(posts), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    return new Response(error.message, { status: 500 });
+  }
+}
+
+// Handle POST requests
 export async function POST(req) {
   const data = await req.formData();
   const file = data.get('picture');
@@ -62,31 +76,23 @@ export async function POST(req) {
   const base64DataUrl = `data:${file.type};base64,${base64Image}`;
 
   const newPost = {
-    id: uuidv4(),
+    id: uuidv4(), // Generate a unique ID for the post
     title,
     content,
     picture: base64DataUrl,
     date: new Date().toISOString(),
   };
 
-  posts.push(newPost);
-  await savePosts();
+  try {
+    const posts = await getPosts();
+    posts.push(newPost);
+    await savePosts(posts);
 
-  return new Response(JSON.stringify(newPost), {
-    status: 201,
-    headers: { 'Content-Type': 'application/json' },
-  });
-}
-
-export async function DELETE(req) {
-  const { id } = await req.json();
-  const index = posts.findIndex((post) => post.id === id);
-  if (index === -1) {
-    return new Response('Post not found', { status: 404 });
+    return new Response(JSON.stringify(newPost), {
+      status: 201,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    return new Response(error.message, { status: 500 });
   }
-
-  posts.splice(index, 1);
-  await savePosts();
-
-  return new Response('Post deleted', { status: 204 });
 }
