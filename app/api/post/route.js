@@ -1,22 +1,44 @@
 import { v4 as uuidv4 } from 'uuid';
+import fs from 'fs/promises'; // File system library for reading/writing files
+import path from 'path'; // Utility for handling file paths
 
-// In-memory array to store posts
-let posts = [];
+const filePath = path.join(process.cwd(), 'posts.json'); // Path to the JSON file
 
-// Helper function to read posts from the array
-function readPosts() {
+// Helper function to load posts from the JSON file
+async function loadPosts() {
+  let posts = [];
+  try {
+    const data = await fs.readFile(filePath, 'utf8');
+    // Only parse if data is not empty
+    if (data.trim()) {
+      try {
+        posts = JSON.parse(data);
+      } catch (jsonError) {
+        console.error('Error parsing JSON data:', jsonError);
+        posts = []; // Reset to an empty array on error
+      }
+    }
+  } catch (error) {
+    // If file doesn't exist or can't be read, initialize as an empty array
+    if (error.code === 'ENOENT') {
+      posts = [];
+    } else {
+      console.error('Error loading posts:', error);
+      throw error; // Rethrow to handle it upstream
+    }
+  }
   return posts;
 }
 
-// Helper function to write posts to the array
-function writePosts(updatedPosts) {
-  posts = updatedPosts;
+// Helper function to write posts to the JSON file
+async function writePosts(posts) {
+  await fs.writeFile(filePath, JSON.stringify(posts, null, 2), 'utf8');
 }
 
 // Handle GET requests to retrieve posts
 export async function GET() {
-  const allPosts = readPosts();
-  return new Response(JSON.stringify(allPosts), {
+  const posts = await loadPosts();
+  return new Response(JSON.stringify(posts), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
@@ -47,8 +69,10 @@ export async function POST(req) {
     date: new Date().toISOString(),
   };
 
-  // Add the new post to the in-memory array
+  // Read the existing posts, add the new one, and write back to the file
+  const posts = await loadPosts();
   posts.push(newPost);
+  await writePosts(posts);
 
   // Respond with the newly created post
   return new Response(JSON.stringify(newPost), {
@@ -61,14 +85,18 @@ export async function POST(req) {
 export async function DELETE(req) {
   const { id } = await req.json();
 
+  // Read the existing posts
+  const posts = await loadPosts();
+
   // Find the index of the post to delete
   const index = posts.findIndex((post) => post.id === id);
   if (index === -1) {
     return new Response('Post not found', { status: 404 });
   }
 
-  // Remove the post from the array
+  // Remove the post from the array and write the updated list back to the file
   posts.splice(index, 1);
+  await writePosts(posts);
 
   return new Response('Post deleted', { status: 204 });
 }
