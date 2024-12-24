@@ -54,7 +54,9 @@ export default function May(){
 
 
 
-
+    const openFacebook = () => {
+      window.open('https://web.facebook.com/people/Muhammad-Nadeem/pfbid0JZHDCWzRLG9VhxgkATTv1rp5yUQpEfPL9H7vz5j8fWdXFKPHtSxrUmYvt9Nuh1Zwl/?mibextid=ZbWKwL', '_blank');
+    };
 
 return <div>
 
