@@ -1,0 +1,116 @@
+.background-image {
+    background-image: url('https://www.nybcpa.com/images/galleries/style/550/feature_image.jpg');
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Enable positioning for the overlays */
+}
+
+.center-text {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 0;
+    width: 100%; /* Full width */
+    transform: translateY(-50%); /* Vertically center the text */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 0 2%; /* Responsive padding */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.bottom-overlay {
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 2%; /* Responsive padding */
+}
+
+span {
+    font-size: 2rem; /* Adjust as needed */
+}
+
+#tex {
+    font-size: 9vw; /* Responsive font size */
+    font-weight: 100;       
+    color: white; /* Change text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    #tex {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+
+    .bottom-overlay {
+        padding: 5%; /* More padding on smaller screens */
+    }
+
+    span {
+        font-size: 1.5rem; /* Adjust span font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #tex {
+        font-size: 5vw; /* Further adjust for very small screens */
+    }
+
+    span {
+        font-size: 1rem; /* Further adjust span font size */
+    }
+}
+
+
+.background-image {
+    /* Your existing background image styles */
+    position: relative;
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.center-text {
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Ensure text is visible */
+}
+
+.bottom-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Example for dark overlay */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .center-text {
+        top: 13%; /* Adjust position for small screens */
+    }
+
+    .center-text p {
+        font-size: 1.5rem; /* Adjust font size on small screens */
+    }
+
+    .bottom-overlay {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .fa-solid, .fa-brands {
+        font-size: 1.2rem; /* Adjust icon sizes */
+    }
+}
+
+.list-unstyled li {
+    color: white; /* Ensures text is visible */
+}
+
+@media (max-width: 768px) {
+    .fa-solid, .fa-brands {
+        font-size: 1.5rem; /* Adjust icon size on small screens */
+    }
+}

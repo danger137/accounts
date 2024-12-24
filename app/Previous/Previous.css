@@ -1,0 +1,11 @@
+.background-image2 {
+    background-image: url('https://www.nybcpa.com/images/galleries/style/550/feature_image.jpg');
+    height: 55vh; /* Full viewport height */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Enable positioning for the overlays */
+  }
+  
+  .hover-text-gold:hover {
+    color: rgb(248, 176, 41) !important;
+  }

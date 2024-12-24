@@ -1,0 +1,17 @@
+#octoberContainer {
+    max-width: 54vw; /* Default max width for larger screens */
+  }
+
+  @media (max-width: 768px) {
+    #octoberContainer {
+      width: 100vw; /* Full width on small screens */
+      max-width: 100%; /* Ensure it doesn't exceed 100% */
+      padding-left: 0; /* Remove left padding */
+      padding-right: 0; /* Remove right padding */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+    .row {
+      margin-left: 0; /* Remove left margin on rows */
+      margin-right: 0; /* Remove right margin on rows */
+    }
+  }

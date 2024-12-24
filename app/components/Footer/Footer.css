@@ -1,0 +1,9 @@
+.small-text {
+    font-size: 16px; /* Default font size */
+  }
+
+  @media (max-width: 576px) {
+    .small-text {
+      font-size: 15px; /* Smaller font size for small screens */
+    }
+  }

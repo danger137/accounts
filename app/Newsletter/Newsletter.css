@@ -1,0 +1,60 @@
+#sh{
+    box-shadow: 0px -5px 8px #c6c6c6;
+    height: 55px;
+    width: 271px;
+    border-radius: 14px;
+}
+#sh2{
+    box-shadow: 0px -5px 8px #c6c6c6;
+    height: 55px;
+    width: fit-content;
+    border-radius: 14px;
+}
+#E{
+    border-radius: 20px;
+}
+#C{
+    border-radius: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  @media (max-width: 576px) {
+    p {
+      font-size: 4.5vw; /* Decrease font size slightly for extra small screens */
+      line-height: 1.1; /* Adjust line height */
+    }
+  }
+
+
+  #res {
+    width: 90vw; /* Default for small screens */
+  }
+
+  @media (min-width: 576px) { /* For medium screens */
+    #res {
+      width: 78vw; /* Width for medium screens */
+    }
+  }
+
+  @media (min-width: 768px) { /* For large screens */
+    #res {
+      width: 52vw; /* Width for large screens */
+    }
+  }
+
+
+  
+.background-image2 {
+  background-image: url('https://www.nybcpa.com/images/galleries/style/550/feature_image.jpg');
+  height: 55vh; /* Full viewport height */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  position: relative; /* Enable positioning for the overlays */
+}
+
+.hover-text-gold:hover {
+  color: rgb(248, 176, 41) !important;
+}

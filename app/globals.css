@@ -1,0 +1,96 @@
+.bottom-overlay {
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 2%; /* Responsive padding */
+}
+.background-image2 {
+    background-image: url('https://www.nybcpa.com/images/galleries/style/550/feature_image.jpg');
+    height: 55vh; /* Full viewport height */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Enable positioning for the overlays */
+}
+
+.hover-text-gold:hover {
+    color: rgb(248, 176, 41) !important;
+  }
+  
+
+  
+  #res {
+    width: 90vw; /* Default for small screens */
+  }
+
+  @media (min-width: 576px) { /* For medium screens */
+    #res {
+      width: 78vw; /* Width for medium screens */
+    }
+  }
+
+  @media (min-width: 768px) { /* For large screens */
+    #res {
+      width: 52vw; /* Width for large screens */
+    }
+  }
+  #octoberContainer {
+    max-width: 54vw; /* Default max width for larger screens */
+  }
+
+  @media (max-width: 768px) {
+    #octoberContainer {
+      width: 100vw; /* Full width on small screens */
+      max-width: 100%; /* Ensure it doesn't exceed 100% */
+      padding-left: 0; /* Remove left padding */
+      padding-right: 0; /* Remove right padding */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+    .row {
+      margin-left: 0; /* Remove left margin on rows */
+      margin-right: 0; /* Remove right margin on rows */
+    }
+  }
+  #sh{
+    box-shadow: 0px -5px 8px #c6c6c6;
+    height: 55px;
+    width: 271px;
+    border-radius: 14px;
+}
+#sh2{
+    box-shadow: 0px -5px 8px #c6c6c6;
+    height: 55px;
+    width: fit-content;
+    border-radius: 14px;
+}
+
+#sh4{
+    box-shadow: 0px -5px 8px #c6c6c6;
+    height: 55px;
+    width: 165px;
+    border-radius: 14px;
+}
+
+
+.form-button {
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-button:hover {
+  background: linear-gradient(to right, #6a00e0, #c900e0);
+}
+
+.form-button {
+  text-decoration: none;
+  border-bottom: none;
+}
